@@ -7,13 +7,13 @@
 	cho 	= checkout
 	b		= branch
 	p		= push
-	cm		= commit -am
+	cm		= commit
 	alls 	= config --get-regexp alias.*
 	shp 	= stash pop
 	sth		= stash save
 	today 	= log --oneline --since='15 hour ago'
 	last 	= log -1 HEAD
-	d  		= diff
+	d  		= diff HEAD
    	d1 		= diff HEAD~
     d2		= diff HEAD~2
     d3 		= diff HEAD~3
