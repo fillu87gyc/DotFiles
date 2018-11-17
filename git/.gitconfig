@@ -1,0 +1,46 @@
+[user]
+	name 	= fillu87gyc
+	email = s1500604@sendai.kosen-ac.jp
+
+[alias]
+	st 		= status
+	cho 	= checkout
+	b		= branch
+	p		= push
+	cm		= commit -am
+	alls 	= config --get-regexp alias.*
+	shp 	= stash pop
+	sth		= stash save
+	today 	= log --oneline --since='15 hour ago'
+	last 	= log -1 HEAD
+	d  		= diff
+   	d1 		= diff HEAD~
+    d2		= diff HEAD~2
+    d3 		= diff HEAD~3
+	grh 	= log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white) %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	loggrh 	= log --graph --all --decorate
+	lgr 	= log --graph --all --decorate
+	logall	= log --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset%C(black bold)%ar%Creset' --date=iso
+	bls		= for-each-ref --sort=committerdate refs/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	mg 		= merge
+	pin 	= push -u origin
+	rename 	= commit --amend
+	ref 	= reflog
+	bd		= push origin --delete
+	or		= origin
+	rget 	= remote prune origin
+	lg		= log
+	rereset = reset --hard HEAD@{1}
+	alias 	= !"if test -z $1; then loop=; for k in `git config --get-regexp ^alias\\. | sort | sed -e 's/^alias\\.\\(\\S*\\).*/\\1/g'`; do echo -n $k; loop="${loop}1"; if test ${#loop} -lt 5; then echo -n '\t'; else echo; loop=; fi; done; exit; fi; git config --list | grep ^alias\\.$1= | sed -e s/^alias\\.//; exit;"
+	delcm 	= reset --soft HEAD^
+[push]
+	default = simple
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	autoCRLF = false
+[commit]
+	template = /Users/fill/dotfiles/git/.git_commit_log_temp
