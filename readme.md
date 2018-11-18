@@ -14,15 +14,18 @@ $ hogehoge.sh
 
 ### done
 
-- tmux
+- .config
+- 拾い集めた shell たち
+- git
 
 ### WIP
 
-- git
-- 拾い集めたshellたち
 - ドキュメント  
+- tmux
+  - ステータスの部分をpowerline(風)にしたい計画
 
 ### todo
 
 - vim
 - brewで入れたもの一覧
+- fish の prompt 部分を powerline で自作したい
