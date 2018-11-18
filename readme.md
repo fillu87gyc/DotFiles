@@ -29,3 +29,7 @@ $ hogehoge.sh
 - vim
 - brew で入れたもの一覧
 - fish の prompt 部分を powerline で自作したい
+
+## Screenshots
+
+![tmux](doc/tmux/tmux_nov19.png)
