@@ -1,0 +1,1 @@
+/Users/fill/.config/fisherman/bobthefish/functions/__bobthefish_glyphs.fish
