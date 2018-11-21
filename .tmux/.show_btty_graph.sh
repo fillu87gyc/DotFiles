@@ -10,4 +10,4 @@ for ((i=$battery; i < 16; i++ )); do
   str="${str} "
 done
 graph="#[bold][${str}]#[default]"
-echo $graph
+echo "$graph"
