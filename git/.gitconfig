@@ -42,5 +42,6 @@
 	smudge = git-lfs smudge -- %f
 [core]
 	autoCRLF = false
+    editor = "/usr/local/bin/nvim" 
 [commit]
 	template = /Users/fill/dotfiles/git/.git_commit_log_temp
