@@ -14,7 +14,7 @@ set -g theme_git_worktree_support yes
 set -g fish_prompt_pwd_dir_length 0 
 set -g theme_newline_cursor yes
 set -g theme_display_date yes
-alias rrm='rm_cmd'
+alias rrm='remove_file.sh'
 alias man='jman'
 alias g='git'
 alias ..='cd ..'
