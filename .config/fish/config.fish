@@ -5,14 +5,16 @@ end
 
 # set -x PATH (echo $PATH | tr ' ' '\n' | sort -u)
 # viでもvimで開く
-alias vi='/usr/bin/vim'
+# alias vi='/usr/bin/vim'
+alias vi='nvim'
+alias vim='nvim'
 ## rmでゴミ箱に入れる
 set -g theme_display_git_master_branch yes
 set -g theme_git_worktree_support yes
 set -g fish_prompt_pwd_dir_length 0 
 set -g theme_newline_cursor yes
 set -g theme_display_date yes
-alias rm='rm -i'
+alias rrm='rm_cmd'
 alias man='jman'
 alias g='git'
 alias ..='cd ..'
@@ -27,3 +29,5 @@ alias color_sample='curl -L https://gist.githubusercontent.com/ytaniike/1002305/
 alias iftop='iftop -i en1'
 alias cot='open $1 -a "/Applications/CotEditor.app"'
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/Users/fill/dotfiles/bin/sh" $fish_user_paths
+set -g fish_user_paths "/Users/fill/dotfiles/bin/fish" $fish_user_paths
