@@ -1,3 +1,10 @@
+set ruler "カーソルが何行目の何列目に置かれているかを表示"
+set autoindent "改行時に前の行のインデントを継続する"
+set tabstop=2 "画面上でタブ文字が占める幅"
+set softtabstop=0 "連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅"
+set shiftwidth=2 "自動インデントでずれる幅"
+set expandtab "タブ入力を複数の空白入力に置き換える"
+set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する"
 " https://liginc.co.jp/409849
 " Search and replace
 set ignorecase
@@ -8,10 +15,6 @@ set inccommand=split
 let mapleader = "\<Space>"
 
 " tabs
-set tabstop=4
-set shiftwidth=4
-set softtabstop=0
-set expandtab
 set smarttab
 set shiftround
 filetype plugin indent on
@@ -21,22 +24,34 @@ set nowrap
 set hlsearch
 set autoindent
 
-set ruler
-set number
 set list
 set wildmenu
 set showcmd
-" カーソル行を強調表示しない
-set nocursorline
 " 挿入モードの時のみ、カーソル行をハイライトする
 autocmd InsertEnter,InsertLeave * set cursorline!
+autocmd InsertEnter,InsertLeave * set cursorcolumn!
 
+" =======================================================
+" それぞれカッコの補完
+" https://qiita.com/shingargle/items/dd1b5510a0685837504a
+inoremap { {}<Left>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap ( ()<ESC>i
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
+" =======================================================
 set clipboard=unnamed
+
 " ===============================================================
 " ref https://qiita.com/rita_cano_bika/items/2ae9c8304f8f12b1b443
 " 「,r」：.vimrcのリロード
 noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
-" ===============================================================
+" ===================================================================
+
+" ===================================================================
+" ref http://yskwkzhr.blogspot.com/2013/02/use-mouse-on-terminal-vim.html
+" Using the mouse on a terminal.
+set mouse=a
+" ================================================
 " tab split
 nnoremap <silent> <S-j> :split<CR>
 nnoremap <silent> <S-l> :vsplit<CR>
@@ -96,6 +111,7 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('Shougo/denite.nvim')
   call dein#add('Lokaltog/vim-easymotion')
   call dein#add('tomasr/molokai')
+  call dein#add('yonchu/accelerated-smooth-scroll')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
