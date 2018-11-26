@@ -30,6 +30,13 @@ $ hogehoge.sh
 - brew で入れたもの一覧
 - fish の prompt 部分を powerline で自作したい
 
+---
+
+## 注意
+
+- vim のプラグインによって通常のフォントだと文字化けするので注意
+  > Install a [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation) compatible font or patch your own. Then set your terminal font.
+
 ## Screenshots
 
-![tmux](doc/tmux/tmux_nov19.png)
+![SS](doc/vim/nov26.png)
