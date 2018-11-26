@@ -27,6 +27,7 @@ alias ll='ls -altFG'
 alias lld='ls -altFGR'
 alias color_sample='curl -L https://gist.githubusercontent.com/ytaniike/1002305/raw/f820537c4ade9db01e539d9727aad323486fc581/256colors_w_numbers.pl |perl'
 alias iftop='iftop -i en1'
+alias emacs='vim'
 alias cot='open $1 -a "/Applications/CotEditor.app"'
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/sh" $fish_user_paths
