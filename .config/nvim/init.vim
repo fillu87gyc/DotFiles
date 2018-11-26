@@ -127,6 +127,7 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('kana/vim-smartinput')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('tyru/caw.vim')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -307,3 +308,11 @@ let g:airline#extensions#ale#warning_symbol = ' '
 let g:airline#extensions#default#section_truncate_width = {}
 let g:airline#extensions#whitespace#enabled = 1
 "---------------------------------------------
+"comment config
+"ref http://ur0.work/NS1i
+nmap <Leader>c  <Plug>(caw:hatpos:toggle)
+vmap <Leader>c  <Plug>(caw:hatpos:toggle)
+nmap <Leader>C  <Plug>(caw:hatpos:comment)
+nmap <Leader>U  <Plug>(caw:hatpos:uncomment)
+vmap <Leader>C  <Plug>(caw:hatpos:comment)
+vmap <Leader>U  <Plug>(caw:hatpos:uncomment)
