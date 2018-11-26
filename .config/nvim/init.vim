@@ -93,6 +93,8 @@ vnoremap <C-p> 20k
 inoremap jj <ESC>
 noremap <Leader>w :w<CR>
 
+" 検索終わりのハイライトを消す
+noremap <ESC><ESC> :noh<CR>
 
 "dein Scripts-----------------------------
 if &compatible
