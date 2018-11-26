@@ -43,12 +43,17 @@ inoremap ( ()<ESC>i
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 " =======================================================
 set clipboard=unnamed
-
-" ===============================================================
+" 全角文字の強調
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+" ---------------------------------------------------------------
 " ref https://qiita.com/rita_cano_bika/items/2ae9c8304f8f12b1b443
 " 「,r」：.vimrcのリロード
 noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
-" ===================================================================
+" -------------------------------------------------------------------
 
 " ===================================================================
 " ref http://yskwkzhr.blogspot.com/2013/02/use-mouse-on-terminal-vim.html
