@@ -34,14 +34,14 @@ set showcmd
 autocmd InsertEnter,InsertLeave * set cursorline!
 autocmd InsertEnter,InsertLeave * set cursorcolumn!
 
-" =======================================================
-" それぞれカッコの補完
-" https://qiita.com/shingargle/items/dd1b5510a0685837504a
-inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap ( ()<ESC>i
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
-" =======================================================
+" " =======================================================
+" " それぞれカッコの補完
+" " https://qiita.com/shingargle/items/dd1b5510a0685837504a
+" inoremap { {}<Left>
+" inoremap {<Enter> {}<Left><CR><ESC><S-o>
+" inoremap ( ()<ESC>i
+" inoremap (<Enter> ()<Left><CR><ESC><S-o>
+" " =======================================================
 set clipboard=unnamed
 " 全角文字の強調
 augroup highlightIdegraphicSpace
@@ -123,6 +123,7 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('ryanoasis/vim-devicons')
+  call dein#add('kana/vim-smartinput')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
