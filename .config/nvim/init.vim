@@ -126,6 +126,7 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('kana/vim-smartinput')
+  call dein#add('tpope/vim-fugitive')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -291,7 +292,18 @@ let g:airline_symbols.paste = 'ρ'			"ペーストモード
 let g:airline_symbols.spell = 'Ꞩ'			"スペルチェック
 let g:airline_symbols.notexists = '∄'		"gitで管理されていない場合
 let g:airline_symbols.whitespace = 'Ξ'	"空白の警告(余分な空白など)
-
-let g:airline_theme = 'molokai'
-
+" let g:airline_theme = 'molokai'
+let g:airline_theme = 'wombat'
+"set laststatus=2
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
+let g:airline_section_c = '%t'
+let g:airline_section_x = '%{&filetype}'
+let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{airline#extensions#ale#get_error()}'
+let g:airline#extensions#ale#error_symbol = ' '
+let g:airline#extensions#ale#warning_symbol = ' '
+let g:airline#extensions#default#section_truncate_width = {}
+let g:airline#extensions#whitespace#enabled = 1
 "---------------------------------------------
