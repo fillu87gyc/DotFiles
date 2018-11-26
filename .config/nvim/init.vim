@@ -1,3 +1,6 @@
+" set ambiwidth=double
+
+set encoding=UTF-8
 set ruler "カーソルが何行目の何列目に置かれているかを表示"
 set autoindent "改行時に前の行のインデントを継続する"
 set tabstop=2 "画面上でタブ文字が占める幅"
@@ -13,7 +16,7 @@ set wrapscan
 set incsearch
 set inccommand=split
 let mapleader = "\<Space>"
-
+set number
 " tabs
 set smarttab
 set shiftround
@@ -112,6 +115,9 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('Lokaltog/vim-easymotion')
   call dein#add('tomasr/molokai')
   call dein#add('yonchu/accelerated-smooth-scroll')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('ryanoasis/vim-devicons')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -238,3 +244,46 @@ map <Leader>k <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader><Leader>s <Plug>(easymotion-bd-w)
 nmap <Leader><Leader>s <Plug>(easymotion-overwin-w)
+
+"---------------------------------------------
+" vim-easymotion の設定 -------------------------
+" https://original-game.com/vim-airline/
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#buffer_idx_format = {
+	\ '0': '0 ',
+	\ '1': '1 ',
+	\ '2': '2 ',
+	\ '3': '3 ',
+	\ '4': '4 ',
+	\ '5': '5 ',
+	\ '6': '6 ',
+	\ '7': '7 ',
+	\ '8': '8 ',
+	\ '9': '9 '
+	\}
+nmap <C-]> <Plug>AirlineSelectPrevTab
+nmap <C-[> <Plug>AirlineSelectNextTab
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_powerline_fonts = 1
+set laststatus=2
+"左側に使用されるセパレータ
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+"右側に使用されるセパレータ
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.crypt = '🔒'		"暗号化されたファイル
+let g:airline_symbols.linenr = '¶'			"行
+let g:airline_symbols.maxlinenr = '㏑'		"最大行
+let g:airline_symbols.branch = '⭠'		"gitブランチ
+let g:airline_symbols.paste = 'ρ'			"ペーストモード
+let g:airline_symbols.spell = 'Ꞩ'			"スペルチェック
+let g:airline_symbols.notexists = '∄'		"gitで管理されていない場合
+let g:airline_symbols.whitespace = 'Ξ'	"空白の警告(余分な空白など)
+
+let g:airline_theme = 'molokai'
+
+"---------------------------------------------
