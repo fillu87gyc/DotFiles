@@ -45,10 +45,10 @@
 
 [core]
   autoCRLF = false
-  editor = "/usr/local/bin/nvim" 
+  editor = "/usr/local/bin/nvim"
 
 [commit]
   template = /Users/fill/dotfiles/git/git_template/.git_commit_log_temp
 
 [init]
-  templatedir = ~/dotfiles/git/.git_template
+  templatedir = /Users/fill/dotfiles/git/git_template

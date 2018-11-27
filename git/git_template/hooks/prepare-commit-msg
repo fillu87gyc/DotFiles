@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case "$2,$3" in
+    commit,HEAD)
+        echo "# " >> "$1"
+        git diff --cached HEAD^ | sed -e 's/^/# /g' >> "$1"
+        ;;
+    ,|template,|squash,)
+        echo "# " >> "$1"
+        git diff --cached | sed -e 's/^/# /g' >> "$1"
+        ;;
+    *)
+        ;;
+esac
