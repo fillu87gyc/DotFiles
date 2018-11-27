@@ -91,8 +91,9 @@ vnoremap <C-n> 20j
 nnoremap <C-p> 20k
 vnoremap <C-p> 20k
 
-nmap <Leader>v byw
-
+nmap <Leader>y byw
+nmap <Leader>V BvE
+nmap <Leader>v bve
 " jjでノーマルモードに移動する&保存する
 inoremap jj <ESC>
 noremap <Leader>w :w<CR>
