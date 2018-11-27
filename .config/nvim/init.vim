@@ -54,7 +54,9 @@ augroup END
 " 「,r」：.vimrcのリロード
 noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
 " -------------------------------------------------------------------
-
+set showmatch
+set matchtime=1
+source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
 " ===================================================================
 " ref http://yskwkzhr.blogspot.com/2013/02/use-mouse-on-terminal-vim.html
 " Using the mouse on a terminal.
@@ -73,7 +75,7 @@ nnoremap <C-l> <C-w>l
 
 " 最後まで飛ぶ
 nnoremap <Leader>l $
-nnoremap <Leader>h ^ 
+nnoremap <Leader>h ^
 vnoremap <Leader>l $
 vnoremap <Leader>h ^
 
@@ -89,12 +91,15 @@ vnoremap <C-n> 20j
 nnoremap <C-p> 20k
 vnoremap <C-p> 20k
 
+nmap <Leader>v byw
+
 " jjでノーマルモードに移動する&保存する
 inoremap jj <ESC>
 noremap <Leader>w :w<CR>
 
 " 検索終わりのハイライトを消す
-noremap <ESC><ESC> :noh<CR>
+" ESCキー2度押しでハイライトの切り替え
+nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
 "dein Scripts-----------------------------
 if &compatible
@@ -272,8 +277,9 @@ let g:airline#extensions#tabline#buffer_idx_format = {
 	\ '8': '8 ',
 	\ '9': '9 '
 	\}
-nmap <C-]> <Plug>AirlineSelectPrevTab
-nmap <C-[> <Plug>AirlineSelectNextTab
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-o> <Plug>AirlineSelectNextTab
+
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
