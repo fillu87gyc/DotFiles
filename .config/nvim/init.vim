@@ -68,10 +68,10 @@ nnoremap <silent> <S-l> :vsplit<CR>
 nnoremap <Bar> $:let pos = getpos(".")<CR>:join<CR>:call setpos('.', pos)<CR>
 
 " window switch
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <Leader><C-h> <C-w>h
+nnoremap <Leader><C-j> <C-w>j
+nnoremap <Leader><C-k> <C-w>k
+nnoremap <Leader><C-l> <C-w>l
 
 " 最後まで飛ぶ
 nnoremap <Leader>l $
@@ -102,6 +102,7 @@ noremap <Leader>w :w<CR>
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
+nmap == gg=Gg;
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -134,6 +135,10 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('kana/vim-smartinput')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tyru/caw.vim')
+  call dein#add('w0rp/ale')
+  call dein#add('Yggdroot/indentLine')
+  call dein#add('prettier/vim-prettier')
+  call dein#add('rhysd/vim-clang-format')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -262,6 +267,21 @@ map  <Leader><Leader>s <Plug>(easymotion-bd-w)
 nmap <Leader><Leader>s <Plug>(easymotion-overwin-w)
 
 "---------------------------------------------
+" 保存時のみ実行する
+let g:ale_lint_on_text_changed = 0
+" 表示に関する設定
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:airline#extensions#ale#open_lnum_symbol = '('
+let g:airline#extensions#ale#close_lnum_symbol = ')'
+let g:ale_echo_msg_format = '[%linter%]%code: %%s'
+highlight link ALEErrorSign Tag
+highlight link ALEWarningSign StorageClass
+" Ctrl + kで次の指摘へ、Ctrl + jで前の指摘へ移動
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+
 " vim-easymotion の設定 -------------------------
 " https://original-game.com/vim-airline/
 let g:airline#extensions#tabline#enabled = 1
