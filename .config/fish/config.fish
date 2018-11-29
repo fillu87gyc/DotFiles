@@ -1,6 +1,7 @@
 function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
   bind \c] peco_select_ghq_repository  # 追加
+  bind \co peco_z # Ctrl-[にバインドする
 end
 
 # set -x PATH (echo $PATH | tr ' ' '\n' | sort -u)
@@ -21,6 +22,7 @@ alias ..='cd ..'
 alias a.out='./a.out'
 alias so='source'
 alias reload='so ~/.config/fish/config.fish; and echo reload!!'
+alias re='reload'
 alias clr='clear'
 alias mkdir='mkdir -p'
 alias ll='ls -altFG'
