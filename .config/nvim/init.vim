@@ -6,6 +6,7 @@ set autoindent "改行時に前の行のインデントを継続する"
 set tabstop=2 "画面上でタブ文字が占める幅"
 set softtabstop=0 "連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅"
 set shiftwidth=2 "自動インデントでずれる幅"
+set textwidth=0 " 長い文章の自動折り返しをしない(テキストなんかはこれで)
 set expandtab "タブ入力を複数の空白入力に置き換える"
 set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する"
 " https://liginc.co.jp/409849
@@ -26,6 +27,9 @@ set nowrap
 
 set hlsearch
 set autoindent
+
+" デフォルトvimrc_exampleのtextwidth設定上書き
+autocmd FileType text setlocal textwidth=0
 
 set list
 set wildmenu
@@ -298,8 +302,8 @@ let g:airline#extensions#tabline#buffer_idx_format = {
 	\ '8': '8 ',
 	\ '9': '9 '
 	\}
-nmap <C-p> <Plug>AirlineSelectPrevTab
-nmap <C-o> <Plug>AirlineSelectNextTab
+nmap <C-o> <Plug>AirlineSelectPrevTab
+nmap <C-p> <Plug>AirlineSelectNextTab
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
@@ -343,3 +347,8 @@ nmap <Leader>C  <Plug>(caw:hatpos:comment)
 nmap <Leader>U  <Plug>(caw:hatpos:uncomment)
 vmap <Leader>C  <Plug>(caw:hatpos:comment)
 vmap <Leader>U  <Plug>(caw:hatpos:uncomment)
+"--------------------------------------------
+let g:clang_format#detect_style_file = 1
+let g:clang_format#auto_format = 1
+let g:clang_format#auto_format_on_insert_leave = 1
+autocmd FileType c ClangFormatAutoEnable
