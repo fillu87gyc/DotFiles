@@ -37,7 +37,7 @@ set showcmd
 " 挿入モードの時のみ、カーソル行をハイライトする
 autocmd InsertEnter,InsertLeave * set cursorline!
 autocmd InsertEnter,InsertLeave * set cursorcolumn!
-
+autocmd InsertLeave * set nopaste
 " " =======================================================
 " " それぞれカッコの補完
 " " https://qiita.com/shingargle/items/dd1b5510a0685837504a
@@ -124,11 +124,10 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('/Users/fill/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here like this:
-  call dein#add('Shougo/neocomplcache')
+  " call dein#add('Shougo/neocomplcache')
   call dein#add('tpope/vim-surround')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('Shougo/denite.nvim')
+  " call dein#add('Shougo/denite.nvim')
   call dein#add('Lokaltog/vim-easymotion')
   call dein#add('tomasr/molokai')
   call dein#add('yonchu/accelerated-smooth-scroll')
@@ -142,13 +141,11 @@ if dein#load_state('/Users/fill/.vim/bundles')
   call dein#add('Yggdroot/indentLine')
   call dein#add('prettier/vim-prettier')
   call dein#add('rhysd/vim-clang-format')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('zchee/deoplete-clang')
   let g:deoplete#enable_at_startup = 1
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
+  " call dein#add('Shougo/neosnippet.vim')
+  " call dein#add('Shougo/neosnippet-snippets')
   " Required:
   call dein#end()
   call dein#save_state()
@@ -176,56 +173,56 @@ set termguicolors
 set background=dark
 " -----------------------------------------
 
-" denite Scripts--------------------------
-nnoremap [denite] <Nop>
-nmap <C-d> [denite]
-
-" grep
-call denite#custom#var('grep', 'command', ['ag'])
-call denite#custom#var('grep', 'default_opts', ['-i', '--vimgrep'])
-call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'pattern_opt', [])
-call denite#custom#var('grep', 'separator', ['--'])
-call denite#custom#var('grep', 'final_opts', [])
-
-nnoremap <silent> [denite]<C-g> :<C-u>Denite grep -mode=normal<CR>
-nnoremap <silent> [denite]<C-r> :<C-u>Denite -resume<CR>
-nnoremap <silent> [denite]<C-n> :<C-u>Denite -resume -cursor-pos=+1 -immediately<CR>
-nnoremap <silent> [denite]<C-p> :<C-u>Denite -resume -cursor-pos=-1 -immediately<CR>
-
-" ノーマルモードで起動、jjでノーマルへ
-call denite#custom#option('default', {'mode': 'normal'})
-call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
-
-" ファイル一覧
-noremap [denite] :Denite file_rec -mode=insert
-call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
-call denite#custom#var('file_rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])
-call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
-      \ ['.git/', '__pycache__/', '*.o', '*.make', '*.min.*'])
-
-" ディレクトリ一覧
-noremap [denite]<C-d> :<C-u>Denite directory_rec<CR>
-noremap [denite]<C-c> :<C-u>Denite directory_rec -default-action=cd<CR>
-
-" 移動
-call denite#custom#map('normal', 'j', '<denite:nop>', 'noremap')
-call denite#custom#map('normal', 'k', '<denite:nop>', 'noremap')
-call denite#custom#map('normal', '<C-n>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('normal', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-call denite#custom#map('normal', '<C-u>', '<denite:move_up_path>', 'noremap')
-call denite#custom#map('insert', '<C-u>', '<denite:move_up_path>', 'noremap')
-
-" ウィンドウを分割して開く
-call denite#custom#map('normal', '<C-j>', '<denite:do_action:split>', 'noremap')
-call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
-call denite#custom#map('normal', '<C-l>', '<denite:do_action:vsplit>', 'noremap')
-call denite#custom#map('insert', '<C-l>', '<denite:do_action:vsplit>', 'noremap')
-
-" Denite Scripts End ----------------------
-
+" " denite Scripts--------------------------
+" nnoremap [denite] <Nop>
+" nmap <C-d> [denite]
+"
+" " grep
+" call denite#custom#var('grep', 'command', ['ag'])
+" call denite#custom#var('grep', 'default_opts', ['-i', '--vimgrep'])
+" call denite#custom#var('grep', 'recursive_opts', [])
+" call denite#custom#var('grep', 'pattern_opt', [])
+" call denite#custom#var('grep', 'separator', ['--'])
+" call denite#custom#var('grep', 'final_opts', [])
+"
+" nnoremap <silent> [denite]<C-g> :<C-u>Denite grep -mode=normal<CR>
+" nnoremap <silent> [denite]<C-r> :<C-u>Denite -resume<CR>
+" nnoremap <silent> [denite]<C-n> :<C-u>Denite -resume -cursor-pos=+1 -immediately<CR>
+" nnoremap <silent> [denite]<C-p> :<C-u>Denite -resume -cursor-pos=-1 -immediately<CR>
+"
+" " ノーマルモードで起動、jjでノーマルへ
+" call denite#custom#option('default', {'mode': 'normal'})
+" call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
+"
+" " ファイル一覧
+" noremap [denite] :Denite file_rec -mode=insert
+" call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+" call denite#custom#var('file_rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])
+" call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
+"      \ ['.git/', '__pycache__/', '*.o', '*.make', '*.min.*'])
+"
+" " ディレクトリ一覧
+" noremap [denite]<C-d> :<C-u>Denite directory_rec<CR>
+" noremap [denite]<C-c> :<C-u>Denite directory_rec -default-action=cd<CR>
+"
+" " 移動
+" call denite#custom#map('normal', 'j', '<denite:nop>', 'noremap')
+" call denite#custom#map('normal', 'k', '<denite:nop>', 'noremap')
+" call denite#custom#map('normal', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+" call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+" call denite#custom#map('normal', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+" call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+" call denite#custom#map('normal', '<C-u>', '<denite:move_up_path>', 'noremap')
+" call denite#custom#map('insert', '<C-u>', '<denite:move_up_path>', 'noremap')
+"
+" " ウィンドウを分割して開く
+" call denite#custom#map('normal', '<C-j>', '<denite:do_action:split>', 'noremap')
+" call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
+" call denite#custom#map('normal', '<C-l>', '<denite:do_action:vsplit>', 'noremap')
+" call denite#custom#map('insert', '<C-l>', '<denite:do_action:vsplit>', 'noremap')
+"
+" " Denite Scripts End ----------------------
+"
 " NERDTree Scripts begin ------------------
 nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 " 表示幅
@@ -246,14 +243,7 @@ let g:NERDTreeIgnore=['\.git$', '\.clean$', '\.swp$', '\.bak$', '\~$']
 " NERDTreeを同時に閉じる
 autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
 " NERDTree Scripts End --------------------
-
-" jedi-vim / deoplete-jedi-----------------
-let g:deoplete#sources#jedi#server_timeout=100
-let g:deoplete#sources#jedi#statement_length=100
-" jedi本体の補完は切る（deoplete-jediで非同期処理をしてくれるため）
-let g:jedi#completions_enabled = 0
-" jedi-vim / deoplete-jedi Scripts End
-
+"
 " vim-easymotion の設定 -------------------------
 " デフォルトのキーマッピングを無効に
 let g:EasyMotion_do_mapping = 0
@@ -270,8 +260,8 @@ map <Leader>k <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader><Leader>s <Plug>(easymotion-bd-w)
 nmap <Leader><Leader>s <Plug>(easymotion-overwin-w)
+" ---------------------------------------------
 
-"---------------------------------------------
 " 保存時のみ実行する
 let g:ale_lint_on_text_changed = 0
 " 表示に関する設定
@@ -353,25 +343,25 @@ let g:clang_format#detect_style_file = 1
 let g:clang_format#auto_format = 1
 let g:clang_format#auto_format_on_insert_leave = 1
 autocmd FileType c ClangFormatAutoEnable
-" ============================================
-" snippetの調整
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
-"set snippet file dir
-let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
+" " ============================================
+" " snippetの調整
+" " Plugin key-mappings.
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k>     <Plug>(neosnippet_expand_target)
+"
+" " SuperTab like snippets behavior.
+" "imap <expr><TAB>
+" " \ pumvisible() ? "\<C-n>" :
+" " \ neosnippet#expandable_or_jumpable() ?
+" " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+"
+" " For conceal markers.
+" if has('conceal')
+"   set conceallevel=2 concealcursor=niv
+" endif
+"
+" "set snippet file dir
+" let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
