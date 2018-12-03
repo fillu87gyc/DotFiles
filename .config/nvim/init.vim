@@ -11,51 +11,16 @@ set expandtab "タブ入力を複数の空白入力に置き換える"
 set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する"
 " https://liginc.co.jp/409849
 " Search and replace
-set ignorecase
 set smartcase
-set wrapscan
-set incsearch
-set inccommand=split
 let mapleader = "\<Space>"
 set number
 " tabs
 set smarttab
 set shiftround
-filetype plugin indent on
-
-set nowrap
-
-set hlsearch
 set autoindent
-
-" デフォルトvimrc_exampleのtextwidth設定上書き
-autocmd FileType text setlocal textwidth=0
-
-set list
-set wildmenu
-set showcmd
-" 挿入モードの時のみ、カーソル行をハイライトする
-autocmd InsertEnter,InsertLeave * set cursorline!
-autocmd InsertEnter,InsertLeave * set cursorcolumn!
-autocmd InsertLeave * set nopaste
-
 set clipboard=unnamed
-" 全角文字の強調
-" augroup highlightIdegraphicSpace
-"   autocmd!
-"   autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
-"   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-" augroup END
 let g:python3_host_prog="/usr/local/bin/python3"
-let g:python2_host_prog="/usr/local/bin/python2"
-noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
-set showmatch
-set matchtime=1
-" tab split
-nnoremap <silent> <S-j> :split<CR>
-nnoremap <silent> <S-l> :vsplit<CR>
-nnoremap <Bar> $:let pos = getpos(".")<CR>:join<CR>:call setpos('.', pos)<CR>
-
+let g:python_host_prog="/usr/local/bin/python2"
 " window switch
 nnoremap <Leader><C-h> <C-w>h
 nnoremap <Leader><C-j> <C-w>j
@@ -102,7 +67,7 @@ endif
 set runtimepath+=/Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/fill/.cache/dein')
+if dein#load_state('/Users/fill/.cache/dein') 
   call dein#begin('/Users/fill/.cache/dein')
 
   " Let dein manage dein
@@ -115,10 +80,12 @@ if dein#load_state('/Users/fill/.cache/dein')
 
   " Add or remove your plugins here like this:
   "
-  "call dein#add('Shougo/neosnippet.vim')
-  "call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/deoplete.nvim')
-  let g:deoplete#enable_at_startup = 1
+  call dein#add('justmao945/vim-clang')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('fszymanski/deoplete-emoji')
   " Required:
   call dein#end()
   call dein#save_state()
@@ -134,4 +101,4 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
+let g:clang_check_syntax_auto = 1

@@ -1,0 +1,6 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+ 
+[[plugins]]
+# snippets
+repo = 'Shougo/neosnippet-snippets'
