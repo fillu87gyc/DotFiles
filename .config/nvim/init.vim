@@ -75,17 +75,16 @@ if dein#load_state('/Users/fill/.cache/dein')
   call dein#add('/Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   "tomlよろしくおねがいします
-  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
+  "  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
+  "  call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
 
   " Add or remove your plugins here like this:
   "
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('justmao945/vim-clang')
+  " call dein#add('Shougo/neosnippet.vim')
+  " call dein#add('Shougo/neosnippet-snippets')
+  " call dein#add('Shougo/deoplete.nvim')
+  call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/unite.vim')
-  call dein#add('fszymanski/deoplete-emoji')
   " Required:
   call dein#end()
   call dein#save_state()
@@ -101,4 +100,3 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-let g:clang_check_syntax_auto = 1

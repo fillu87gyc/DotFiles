@@ -8,7 +8,7 @@ end
 # viでもvimで開く
 # alias vi='/usr/bin/vim'
 alias vi='nvim'
-alias vim='nvim'
+alias vim='/usr/local/bin/vim'
 ## rmでゴミ箱に入れる
 set -g theme_display_git_master_branch yes
 set -g theme_git_worktree_support yes
