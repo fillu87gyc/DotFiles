@@ -2,13 +2,14 @@ function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
   bind \c] peco_select_ghq_repository  # 追加
   bind \co peco_z # Ctrl-[にバインドする
+  bind \cs emoji-cli
 end
 
 # set -x PATH (echo $PATH | tr ' ' '\n' | sort -u)
 # viでもvimで開く
 # alias vi='/usr/bin/vim'
 alias vi='nvim'
-alias vim='nvim'
+alias vim='/usr/local/bin/vim'
 ## rmでゴミ箱に入れる
 set -g theme_display_git_master_branch yes
 set -g theme_git_worktree_support yes
