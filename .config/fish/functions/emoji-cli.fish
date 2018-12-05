@@ -7,7 +7,7 @@ function __emoji-cli_available
   end
 end
 
-function __emoji-cli -d 'Emoji completion on the command line'
+function emoji-cli -d 'Emoji completion on the command line'
   set -q EMOJI_CLI_FILTER; or set -l EMOJI_CLI_FILTER 'fzy' 'fzf' 'peco' 'percol'
   set -l buf (commandline -t)
   set -l cursor (commandline -C)
@@ -28,7 +28,8 @@ function __emoji-cli -d 'Emoji completion on the command line'
     end
   end
 
-  cat (dirname (realpath (status -f)))/../emoji.tsv \
+#   cat (dirname (realpath (status -f)))/../emoji.tsv \
+	cat /Users/fill/dotfiles/.config/fisher/github.com/Tosuke/emoji-cli/emoji.tsv \
     | awk '{ print ":"$1": "$2}' \
     | eval (__emoji-cli_available $EMOJI_CLI_FILTER)" --query '$query'" \
     | string match -r ':[^:]+:' \
