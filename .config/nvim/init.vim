@@ -36,21 +36,11 @@ set wildmenu
 set showcmd
 " 挿入モードの時のみ、カーソル行をハイライトする
 autocmd InsertEnter,InsertLeave * set cursorline!
-autocmd InsertEnter,InsertLeave * set cursorcolumn!
+" autocmd InsertEnter,InsertLeave * set cursorcolumn!
 
 set clipboard=unnamed
-" 全角文字の強調
-augroup highlightIdegraphicSpace
-  autocmd!
-  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
-  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-augroup END
-" ---------------------------------------------------------------
-" ref https://qiita.com/rita_cano_bika/items/2ae9c8304f8f12b1b443
-" 「,r」：.vimrcのリロード
 noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
-" -------------------------------------------------------------------
-set showmatch
+" set showmatch
 set matchtime=1
 source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
 " ===================================================================
@@ -97,8 +87,7 @@ noremap <Leader>w :w<CR>
 " 検索終わりのハイライトを消す
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
-
-nmap == gg=Gg;
+nnoremap == gg=Gg;
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved

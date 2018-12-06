@@ -9,8 +9,8 @@ repo = 'Shougo/neosnippet-snippets'
 repo= 'Lokaltog/vim-easymotion'
 hook_source='''
   let g:EasyMotion_do_mapping = 0
-  map <Leader>f <plug>(easymotion-overwin-f2)
   let g:EasyMotion_smartcase = 1
+  map <Leader>f <plug>(easymotion-overwin-f2)
   map <Leader>j <Plug>(easymotion-overwin-line)
   map <Leader>k <Plug>(easymotion-overwin-line)
   map  <Leader><Leader>s <Plug>(easymotion-bd-w)
@@ -33,6 +33,7 @@ repo='yonchu/accelerated-smooth-scroll'
 
 [[plugins]]
 repo='vim-airline/vim-airline'
+depends=['ale']
 hook_source='''
 	let g:airline#extensions#tabline#enabled = 1
 	let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -106,3 +107,53 @@ repo='Yggdroot/indentLine'
 
 [[plugins]]
 repo='Shougo/unite.vim'
+
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_source = '''
+  nnoremap <silent> <C-e> :NERDTreeToggle<CR>
+  let g:NERDTreeWinSize = 30
+  let g:NERDTreeShowBookmarks = 1
+  let g:NERDTreeMapUpdir = ''
+  let g:NERDTreeMapOpenSplit = '<C-j>'
+  let g:NERDTreeMapOpenVSplit = '<C-l>'
+  let g:NERDTreeQuitOnOpen = 1
+  let g:NERDTreeShowHidden = 1
+  let g:NERDTreeIgnore = ['\.git$', '\.clean$', '\.swp$', '\.bak$', '\~$']
+  autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_source = '''
+let g:ale_lint_on_text_changed = 0
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:airline#extensions#ale#open_lnum_symbol = '('
+let g:airline#extensions#ale#close_lnum_symbol = ')'
+let g:ale_echo_msg_format = '[%linter%]%code: %%s'
+highlight link ALEErrorSign Tag
+highlight link ALEWarningSign StorageClass
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+'''
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+hook_source = '''
+  let g:clang_format#detect_style_file = 1
+  let g:clang_format#auto_format = 1
+  let g:clang_format#auto_format_on_insert_leave = 1
+  autocmd FileType c ClangFormatAutoEnable
+'''
+[[plugins]]
+repo='Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
