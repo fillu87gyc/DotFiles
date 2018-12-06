@@ -11,16 +11,58 @@ set expandtab "タブ入力を複数の空白入力に置き換える"
 set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する"
 " https://liginc.co.jp/409849
 " Search and replace
+set ignorecase
 set smartcase
+set wrapscan
+set incsearch
+set inccommand=split
 let mapleader = "\<Space>"
 set number
 " tabs
 set smarttab
 set shiftround
+filetype plugin indent on
+
+set nowrap
+
+set hlsearch
 set autoindent
+
+" デフォルトvimrc_exampleのtextwidth設定上書き
+autocmd FileType text setlocal textwidth=0
+
+set list
+set wildmenu
+set showcmd
+" 挿入モードの時のみ、カーソル行をハイライトする
+autocmd InsertEnter,InsertLeave * set cursorline!
+autocmd InsertEnter,InsertLeave * set cursorcolumn!
+
 set clipboard=unnamed
-let g:python3_host_prog="/usr/local/bin/python3"
-let g:python_host_prog="/usr/local/bin/python2"
+" 全角文字の強調
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+" ---------------------------------------------------------------
+" ref https://qiita.com/rita_cano_bika/items/2ae9c8304f8f12b1b443
+" 「,r」：.vimrcのリロード
+noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
+" -------------------------------------------------------------------
+set showmatch
+set matchtime=1
+source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
+" ===================================================================
+" ref http://yskwkzhr.blogspot.com/2013/02/use-mouse-on-terminal-vim.html
+" Using the mouse on a terminal.
+set mouse=a
+" ================================================
+" tab split
+nnoremap <silent> <S-j> :split<CR>
+nnoremap <silent> <S-l> :vsplit<CR>
+nnoremap <Bar> $:let pos = getpos(".")<CR>:join<CR>:call setpos('.', pos)<CR>
+
 " window switch
 nnoremap <Leader><C-h> <C-w>h
 nnoremap <Leader><C-j> <C-w>j
@@ -57,7 +99,6 @@ noremap <Leader>w :w<CR>
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
 nmap == gg=Gg;
-
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -73,18 +114,9 @@ if dein#load_state('/Users/fill/.cache/dein')
   " Let dein manage dein
   " Required:
   call dein#add('/Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim')
-
   "tomlよろしくおねがいします
-  "  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
-  "  call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
-
-  " Add or remove your plugins here like this:
-  "
-  " call dein#add('Shougo/neosnippet.vim')
-  " call dein#add('Shougo/neosnippet-snippets')
-  " call dein#add('Shougo/deoplete.nvim')
-  call dein#add('Shougo/neocomplete.vim')
-  call dein#add('Shougo/unite.vim')
+  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
+  call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
   " Required:
   call dein#end()
   call dein#save_state()
