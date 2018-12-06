@@ -30,9 +30,7 @@ repo = 'tpope/vim-surround'
 repo = 'w0rp/ale'
 on_i = 1
 hook_source = '''
-# 保存時のみ実行する
 let g:ale_lint_on_text_changed = 0
-# 表示に関する設定
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
 let g:airline#extensions#ale#open_lnum_symbol = '('
@@ -40,7 +38,6 @@ let g:airline#extensions#ale#close_lnum_symbol = ')'
 let g:ale_echo_msg_format = '[%linter%]%code: %%s'
 highlight link ALEErrorSign Tag
 highlight link ALEWarningSign StorageClass
-# Ctrl + kで次の指摘へ、Ctrl + jで前の指摘へ移動
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 '''
@@ -49,22 +46,14 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 repo = 'scrooloose/nerdtree'
 hook_source = '''
   nnoremap <silent> <C-e> :NERDTreeToggle<CR>
-  # 表示幅
   let g:NERDTreeWinSize = 30
-  # ブックマークを表示
   let g:NERDTreeShowBookmarks = 1
-  # 親ディレクトリへ移動
   let g:NERDTreeMapUpdir = ''
-  # ファイルの開き方
   let g:NERDTreeMapOpenSplit = '<C-j>'
   let g:NERDTreeMapOpenVSplit = '<C-l>'
-  # ファイルを開いたらNERDTreeを閉じる
   let g:NERDTreeQuitOnOpen = 1
-  # 隠しファイルを表示
   let g:NERDTreeShowHidden = 1
-  # 非表示ファイル
   let g:NERDTreeIgnore = ['\.git$', '\.clean$', '\.swp$', '\.bak$', '\~$']
-  # NERDTreeを同時に閉じる
   autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
 '''
 
