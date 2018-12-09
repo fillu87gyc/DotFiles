@@ -1,0 +1,163 @@
+[[plugins]]
+repo= 'cespare/vim-toml'
+[[plugins]]
+repo = 'inkarkat/vim-SyntaxRange'
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+# snippets
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo= 'Lokaltog/vim-easymotion'
+hook_add='''
+  let g:EasyMotion_do_mapping = 0
+  let g:EasyMotion_smartcase = 1
+  map <Leader>f <plug>(easymotion-overwin-f2)
+  map <Leader>j <Plug>(easymotion-overwin-line)
+  map <Leader>k <Plug>(easymotion-overwin-line)
+  map  <Leader><Leader>s <Plug>(easymotion-bd-w)
+  nmap <Leader><Leader>s <Plug>(easymotion-overwin-w)
+'''
+
+[[plugins]]
+repo= 'tomasr/molokai'
+depends=['vim-airline']
+hook_add='''
+  colorscheme molokai
+  syntax on
+  set t_Co=256
+  set termguicolors
+  set background=dark
+'''
+
+[[plugins]]
+repo='yonchu/accelerated-smooth-scroll'
+
+[[plugins]]
+repo='vim-airline/vim-airline'
+depends=['ale']
+hook_add='''
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+  let g:airline#extensions#tabline#buffer_idx_format = {
+    \ '0': '0 ',
+    \ '1': '1 ',
+    \ '2': '2 ',
+    \ '3': '3 ',
+    \ '4': '4 ',
+    \ '5': '5 ',
+    \ '6': '6 ',
+    \ '7': '7 ',
+    \ '8': '8 ',
+    \ '9': '9 '
+    \}
+  nmap <C-o> <Plug>AirlineSelectPrevTab
+  nmap <C-p> <Plug>AirlineSelectNextTab
+
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+  let g:airline_powerline_fonts = 1
+  set laststatus=2
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
+  let g:airline_right_sep = '⮂'
+  let g:airline_right_alt_sep = '⮃'
+  let g:airline_symbols.crypt = '🔒'
+  let g:airline_symbols.linenr = '¶'
+  let g:airline_symbols.maxlinenr = '㏑'
+  let g:airline_symbols.branch = '⭠'
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.spell = 'Ꞩ'
+  let g:airline_symbols.notexists = '∄'
+  let g:airline_symbols.whitespace = 'Ξ'
+  let g:airline_theme = 'molokai'
+  let g:airline#extensions#branch#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#wordcount#enabled = 0
+  let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
+  let g:airline_section_c = '%t'
+  let g:airline_section_x = '%{&filetype}'
+  let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{airline#extensions#ale#get_error()}'
+  let g:airline#extensions#ale#error_symbol = ' '
+  let g:airline#extensions#ale#warning_symbol = ' '
+  let g:airline#extensions#default#section_truncate_width = {}
+  let g:airline#extensions#whitespace#enabled = 1
+'''
+
+[[plugins]]
+repo='vim-airline/vim-airline-themes'
+depends = ['vim-airline']
+
+[[plugins]]
+repo='ryanoasis/vim-devicons'
+depends = ['vim-airline']
+
+[[plugins]]
+repo='tyru/caw.vim'
+hook_add='''
+  nmap <Leader>c  <Plug>(caw:hatpos:toggle)
+  vmap <Leader>c  <Plug>(caw:hatpos:toggle)
+  nmap <Leader>C  <Plug>(caw:hatpos:comment)
+  nmap <Leader>U  <Plug>(caw:hatpos:uncomment)
+  vmap <Leader>C  <Plug>(caw:hatpos:comment)
+  vmap <Leader>U  <Plug>(caw:hatpos:uncomment)
+'''
+
+[[plugins]]
+repo='Yggdroot/indentLine'
+
+[[plugins]]
+repo='Shougo/unite.vim'
+
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  nnoremap <silent> <C-e> :NERDTreeToggle<CR>
+  let g:NERDTreeWinSize = 30
+  let g:NERDTreeShowBookmarks = 1
+  let g:NERDTreeMapUpdir = ''
+  let g:NERDTreeMapOpenSplit = '<C-j>'
+  let g:NERDTreeMapOpenVSplit = '<C-l>'
+  let g:NERDTreeQuitOnOpen = 1
+  let g:NERDTreeShowHidden = 1
+  let g:NERDTreeIgnore = ['\.git$', '\.clean$', '\.swp$', '\.bak$', '\~$']
+  autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+let g:ale_lint_on_text_changed = 0
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:airline#extensions#ale#open_lnum_symbol = '('
+let g:airline#extensions#ale#close_lnum_symbol = ')'
+let g:ale_echo_msg_format = '[%linter%]%code: %%s'
+highlight link ALEErrorSign Tag
+highlight link ALEWarningSign StorageClass
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+'''
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+hook_add = '''
+  let g:clang_format#detect_style_file = 1
+  let g:clang_format#auto_format = 1
+  let g:clang_format#auto_format_on_insert_leave = 1
+  autocmd FileType c ClangFormatAutoEnable
+'''
+[[plugins]]
+repo='Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']

@@ -2,3 +2,4 @@
 .config/configstore
 sandbox/*
 .vscode/*
+tasklist.md

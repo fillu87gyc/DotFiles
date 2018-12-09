@@ -56,18 +56,15 @@ function __bobthefish_timestamp -S -d 'Show the current timestamp'
   date $theme_date_format
 end
 
-#function fish_right_prompt -d 'bobthefish is all about the right prompt'
-#  set -l __bobthefish_left_arrow_glyph \uE0B3
-#  if [ "$theme_powerline_fonts" = "no" ]
-#    set __bobthefish_left_arrow_glyph '<'
-#  end
-#
-#  set_color $fish_color_autosuggestion
-#
-#  __bobthefish_cmd_duration
-#  __bobthefish_timestamp
-#  set_color normal
-#end
-function fish_right_prompt 
+function fish_right_prompt -d 'bobthefish is all about the right prompt'
+  set -l __bobthefish_left_arrow_glyph \uE0B3
+  if [ "$theme_powerline_fonts" = "no" ]
+    set __bobthefish_left_arrow_glyph '<'
+  end
 
+  set_color $fish_color_autosuggestion
+
+  __bobthefish_cmd_duration
+  __bobthefish_timestamp
+  set_color normal
 end
