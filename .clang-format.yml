@@ -32,7 +32,7 @@ SpaceAfterCStyleCast: false
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeParens: 'ControlStatements'
 SpaceInEmptyParentheses: false
-SpacesBeforeTrailingComments: 0
+SpacesBeforeTrailingComments: 4
 SpacesInCStyleCastParentheses: true
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
