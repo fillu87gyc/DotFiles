@@ -32,6 +32,7 @@ alias color_sample='curl -L https://gist.githubusercontent.com/ytaniike/1002305/
 alias iftop='iftop -i en1'
 alias emacs='vim'
 alias cot='open $1 -a "/Applications/CotEditor.app"'
+alias sp '~/dotfiles/bin/sh/vim-speedtest.sh'
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/sh" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/fish" $fish_user_paths
