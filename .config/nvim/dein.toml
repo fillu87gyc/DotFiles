@@ -1,7 +1,9 @@
 [[plugins]]
 repo= 'cespare/vim-toml'
+
 [[plugins]]
 repo = 'inkarkat/vim-SyntaxRange'
+
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
@@ -158,6 +160,6 @@ hook_add = '''
 [[plugins]]
 repo='Shougo/context_filetype.vim'
 
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-depends = ['neosnippet-snippets', 'context_filetype.vim']
+# [[plugins]]
+# repo = 'Shougo/neosnippet.vim'
+# depends = ['neosnippet-snippets', 'context_filetype.vim']
