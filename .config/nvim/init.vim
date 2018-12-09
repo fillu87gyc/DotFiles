@@ -1,14 +1,14 @@
 " set ambiwidth=double
 
 set encoding=UTF-8
-set ruler "カーソルが何行目の何列目に置かれているかを表示"
-set autoindent "改行時に前の行のインデントを継続する"
-set tabstop=2 "画面上でタブ文字が占める幅"
-set softtabstop=0 "連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅"
-set shiftwidth=2 "自動インデントでずれる幅"
-set textwidth=0 " 長い文章の自動折り返しをしない(テキストなんかはこれで)
-set expandtab "タブ入力を複数の空白入力に置き換える"
-set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する"
+set ruler           "カーソルが何行目の何列目に置かれているかを表示"
+set autoindent      "改行時に前の行のインデントを継続する"
+set tabstop=2       "画面上でタブ文字が占める幅"
+set softtabstop=0   "連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅"
+set shiftwidth=2    "自動インデントでずれる幅"
+set textwidth=0     "長い文章の自動折り返しをしない(テキストなんかはこれで)
+set expandtab       "タブ入力を複数の空白入力に置き換える"
+set smartindent     "改行時に入力された行の末尾に合わせて次の行のインデントを増減する"
 " https://liginc.co.jp/409849
 " Search and replace
 set ignorecase
@@ -18,10 +18,12 @@ set incsearch
 set inccommand=split
 let mapleader = "\<Space>"
 set number
-" tabs
+" 挿入モードの時のみ、カーソル行をハイライトする
+autocmd InsertEnter,InsertLeave * set cursorline!
+
+"-------- tabs--------
 set smarttab
 set shiftround
-filetype plugin indent on
 
 set nowrap
 
@@ -34,21 +36,12 @@ autocmd FileType text setlocal textwidth=0
 set list
 set wildmenu
 set showcmd
-" 挿入モードの時のみ、カーソル行をハイライトする
-autocmd InsertEnter,InsertLeave * set cursorline!
-" autocmd InsertEnter,InsertLeave * set cursorcolumn!
-
 set clipboard=unnamed
 noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
 " set showmatch
 set matchtime=1
 source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
-" ===================================================================
-" ref http://yskwkzhr.blogspot.com/2013/02/use-mouse-on-terminal-vim.html
-" Using the mouse on a terminal.
 set mouse=a
-" ================================================
-" tab split
 nnoremap <silent> <S-j> :split<CR>
 nnoremap <silent> <S-l> :vsplit<CR>
 nnoremap <Bar> $:let pos = getpos(".")<CR>:join<CR>:call setpos('.', pos)<CR>
@@ -121,6 +114,8 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+"tomlの有効化
 augroup MyVimrc
     autocmd!
 augroup END
