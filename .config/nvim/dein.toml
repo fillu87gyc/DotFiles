@@ -11,7 +11,7 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo= 'Lokaltog/vim-easymotion'
-hook_source='''
+hook_add='''
   let g:EasyMotion_do_mapping = 0
   let g:EasyMotion_smartcase = 1
   map <Leader>f <plug>(easymotion-overwin-f2)
@@ -24,7 +24,7 @@ hook_source='''
 [[plugins]]
 repo= 'tomasr/molokai'
 depends=['vim-airline']
-hook_source='''
+hook_add='''
   colorscheme molokai
   syntax on
   set t_Co=256
@@ -38,7 +38,7 @@ repo='yonchu/accelerated-smooth-scroll'
 [[plugins]]
 repo='vim-airline/vim-airline'
 depends=['ale']
-hook_source='''
+hook_add='''
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_idx_mode = 1
   let g:airline#extensions#tabline#buffer_idx_format = {
@@ -97,7 +97,7 @@ depends = ['vim-airline']
 
 [[plugins]]
 repo='tyru/caw.vim'
-hook_source='''
+hook_add='''
   nmap <Leader>c  <Plug>(caw:hatpos:toggle)
   vmap <Leader>c  <Plug>(caw:hatpos:toggle)
   nmap <Leader>C  <Plug>(caw:hatpos:comment)
@@ -115,7 +115,7 @@ repo='Shougo/unite.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-hook_source = '''
+hook_add = '''
   nnoremap <silent> <C-e> :NERDTreeToggle<CR>
   let g:NERDTreeWinSize = 30
   let g:NERDTreeShowBookmarks = 1
@@ -134,7 +134,7 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'w0rp/ale'
-hook_source = '''
+hook_add = '''
 let g:ale_lint_on_text_changed = 0
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
@@ -149,7 +149,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 [[plugins]]
 repo = 'rhysd/vim-clang-format'
-hook_source = '''
+hook_add = '''
   let g:clang_format#detect_style_file = 1
   let g:clang_format#auto_format = 1
   let g:clang_format#auto_format_on_insert_leave = 1
