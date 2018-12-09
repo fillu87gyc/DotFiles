@@ -1,7 +1,0 @@
-[[plugins]]
-# neosnippet
-repo = 'Shougo/neosnippet.vim'
-on_i  = 1
-on_ft = ['snippet']
-depends = ['neosnippet-snippets']
-
