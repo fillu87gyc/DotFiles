@@ -34,6 +34,11 @@ hook_add='''
   set background=dark
 '''
 
+# airlineの左下にブランチを表示するために
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+depends=['vim-airline']
+
 [[plugins]]
 repo='yonchu/accelerated-smooth-scroll'
 

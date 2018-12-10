@@ -1,0 +1,185 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.019  000.019: --- NVIM STARTING ---
+001.552  001.533: locale set
+005.225  003.673: inits 1
+005.264  000.038: window checked
+006.156  000.893: parsing arguments
+006.655  000.499: expanding arguments
+006.932  000.277: inits 2
+008.092  001.160: init highlight
+010.649  000.875  000.875: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/macros/matchit.vim
+012.481  001.102  001.102: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein.vim
+014.750  001.314  001.314: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/autoload.vim
+018.093  001.788  001.788: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/util.vim
+020.109  000.677  000.677: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/ftoff.vim
+023.698  001.160  001.160: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/types/git.vim
+024.321  002.725  001.565: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/parse.vim
+030.108  001.051  001.051: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/toml.vim
+079.497  003.353  003.353: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/colors/molokai.vim
+083.820  001.009  001.009: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+085.264  000.273  000.273: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+086.052  000.269  000.269: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+087.138  005.684  004.133: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/colors/molokai.vim
+087.296  006.515  000.831: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/synload.vim
+099.830  000.344  000.344: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/ftdetect/ftdetect.vim
+100.044  012.558  012.214: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/filetype.vim
+100.150  020.549  001.477: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syntax.vim
+101.313  000.294  000.294: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+102.890  000.290  000.290: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+103.749  000.288  000.288: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+104.707  004.409  003.537: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/colors/molokai.vim
+121.144  002.122  002.122: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/install.vim
+3301.485  000.741  000.741: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/autoload/deoplete.vim
+3301.693  001.433  000.691: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/plugin/deoplete.vim
+3306.385  000.402  000.402: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/dein/types/raw.vim
+3500.387  000.117  000.117: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/filetype.vim
+3500.747  000.102  000.102: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/ftplugin.vim
+3501.656  000.817  000.817: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/ftplugin.vim
+3502.345  000.439  000.439: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/indent.vim
+3503.520  000.881  000.881: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/nosyntax.vim
+3505.241  000.310  000.310: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+3506.733  000.296  000.296: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+3507.590  000.290  000.290: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syncolor.vim
+3508.541  004.623  003.728: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/colors/molokai.vim
+3508.689  004.963  000.340: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/synload.vim
+3508.744  006.229  000.385: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/syntax.vim
+3512.469  001.115  001.115: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/vital/dein.vim
+3513.661  000.676  000.676: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/vital/_dein/System/Job.vim
+3514.353  000.264  000.264: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/vital/_dein.vim
+3515.452  000.478  000.478: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim/autoload/vital/_dein/System/Job/Neovim.vim
+14697.049  14688.481  14636.444: sourcing /Users/fill/.config/nvim/init.vim
+14697.091  000.518: sourcing vimrc file(s)
+14698.680  000.280  000.280: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/plugin/deoplete.vim
+14710.368  009.901  009.901: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/EasyMotion.vim
+14712.446  000.620  000.620: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/nerdtree.vim
+14715.085  001.266  001.266: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/path.vim
+14715.777  000.524  000.524: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/menu_controller.vim
+14716.415  000.470  000.470: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/menu_item.vim
+14717.107  000.529  000.529: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/key_map.vim
+14718.006  000.735  000.735: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/bookmark.vim
+14718.977  000.789  000.789: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/tree_file_node.vim
+14720.218  001.079  001.079: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/tree_dir_node.vim
+14721.182  000.797  000.797: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/opener.vim
+14722.071  000.725  000.725: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/creator.vim
+14722.530  000.295  000.295: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/flag_set.vim
+14723.246  000.559  000.559: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/nerdtree.vim
+14724.262  000.859  000.859: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/ui.vim
+14724.703  000.280  000.280: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/event.vim
+14725.164  000.309  000.309: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/lib/nerdtree/notifier.vim
+14726.472  001.124  001.124: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/nerdtree/ui_glue.vim
+14731.493  000.498  000.498: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/nerdtree_plugin/exec_menuitem.vim
+14733.261  001.684  001.684: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/nerdtree_plugin/fs_menu.vim
+14734.706  001.282  001.282: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/nerdtree_plugin/webdevicons.vim
+14734.954  024.428  010.003: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/NERD_tree.vim
+14735.436  000.397  000.397: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/SyntaxRange.vim
+14736.306  000.787  000.787: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/ac_smooth_scroll.vim
+14736.531  000.146  000.146: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/airline-themes.vim
+14738.191  000.825  000.825: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline.vim
+14739.223  000.605  000.605: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/init.vim
+14740.811  000.838  000.838: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/parts.vim
+14743.362  000.763  000.763: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/util.vim
+14743.436  006.830  003.799: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/airline.vim
+14745.301  000.631  000.631: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/ale/events.vim
+14745.561  002.026  001.395: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/ale.vim
+14754.703  009.052  009.052: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/caw.vim
+14755.834  001.014  001.014: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/clang_format.vim
+14757.035  001.107  001.107: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/fugitive.vim
+14758.627  001.487  001.487: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/surround.vim
+14760.559  001.047  001.047: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/unite/custom.vim
+14760.750  002.013  000.966: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/unite/bookmark.vim
+14761.388  000.534  000.534: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/unite/buffer.vim
+14762.109  000.620  000.620: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/unite/window.vim
+14762.766  000.560  000.560: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/unite.vim
+14769.533  001.078  001.078: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/vital/unite.vim
+14771.109  000.588  000.588: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/vital/_unite/Prelude.vim
+14771.652  001.756  001.168: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/vital/_unite/Prelude.vim
+14772.506  005.657  002.823: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/unite/util.vim
+14773.154  006.867  001.210: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/unite.vim
+14774.091  000.637  000.637: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/unite/variables.vim
+14774.874  012.016  004.512: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/plugin/webdevicons.vim
+14776.892  000.772  000.772: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/gzip.vim
+14777.410  000.420  000.420: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/health.vim
+14777.980  000.470  000.470: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/man.vim
+14779.464  001.387  001.387: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/matchit.vim
+14780.230  000.668  000.668: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/matchparen.vim
+14781.411  001.081  001.081: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/netrwPlugin.vim
+14784.151  000.750  000.750: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/autoload/remote/host.vim
+14786.014  001.061  001.061: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/autoload/remote/define.vim
+14786.193  004.068  002.257: sourcing /Users/fill/.local/share/nvim/rplugin.vim
+14786.210  004.690  000.622: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/rplugin.vim
+14786.618  000.299  000.299: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/rrhelper.vim
+14787.461  000.679  000.679: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/shada.vim
+14787.914  000.331  000.331: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/spellfile.vim
+14788.547  000.523  000.523: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/tarPlugin.vim
+14789.075  000.430  000.430: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/tohtml.vim
+14789.454  000.280  000.280: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/tutor.vim
+14790.152  000.589  000.589: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/plugin/zipPlugin.vim
+14790.169  007.258: loading plugins
+14790.362  000.193: loading packages
+14791.567  000.960  000.960: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/after/plugin/indentLine.vim
+14791.697  000.374: loading after plugins
+14791.715  000.018: inits 3
+14798.140  006.425: reading ShaDa
+14798.152  000.012: waiting for return
+15827.719  1029.568: clearing screen
+15839.920  002.433  002.433: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/scripts.vim
+15841.886  000.481  000.481: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/ftplugin/toml.vim
+15846.473  000.486  000.486: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/after/ftplugin/toml/caw.vim
+15848.866  000.993  000.993: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/syntax/toml.vim
+15851.336  001.198  001.198: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions.vim
+15852.284  000.433  000.433: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/quickfix.vim
+15852.984  000.323  000.323: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/unite.vim
+15853.751  000.382  000.382: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/netrw.vim
+15854.819  000.442  000.442: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/term.vim
+15856.571  000.826  000.826: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/branch.vim
+15857.445  000.426  000.426: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/fugitiveline.vim
+15858.375  000.492  000.492: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/ale.vim
+15861.147  001.103  001.103: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/whitespace.vim
+15863.214  000.605  000.605: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline.vim
+15864.366  000.384  000.384: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/autoshow.vim
+15865.530  000.577  000.577: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/tabs.vim
+15868.124  000.813  000.813: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/buffers.vim
+15869.531  000.402  000.402: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/keymap.vim
+15878.408  000.515  000.515: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/section.vim
+15880.217  001.025  001.025: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/highlighter.vim
+15886.423  000.418  000.418: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/themes.vim
+15887.203  001.826  001.408: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/themes/molokai.vim
+15891.722  000.499  000.499: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/themes/molokai.vim
+15926.565  000.741  000.741: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/builder.vim
+15927.801  000.516  000.516: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/default.vim
+15963.633  000.774  000.774: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/SyntaxRange.vim
+15975.535  011.273  011.273: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/syntax/vim.vim
+15985.089  007.890  007.890: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/fugitive.vim
+15988.153  000.728  000.728: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/ale.vim
+15989.533  001.002  001.002: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/ale/util.vim
+15990.855  000.897  000.897: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/ale/linter.vim
+15992.294  000.378  000.378: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/unite/sources/buffer/variables.vim
+15993.135  124.552: opening buffers
+15993.323  000.188: BufEnter autocommands
+15993.328  000.005: editing files in windows
+15994.593  000.705  000.705: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/autoload/deoplete/init.vim
+15995.973  000.664  000.664: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/autoload/deoplete/util.vim
+15996.803  000.456  000.456: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/autoload/deoplete/custom.vim
+15998.937  000.886  000.886: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/autoload/provider/pythonx.vim
+16127.549  128.231  128.231: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/autoload/provider/python3.vim
+16129.647  001.146  001.146: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/autoload/provider.vim
+16435.055  000.811  000.811: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/autoload/deoplete/mapping.vim
+16436.361  000.775  000.775: sourcing /Users/fill/.cache/dein/repos/github.com/Shougo/deoplete.nvim/autoload/deoplete/handler.vim
+16437.274  310.272: VimEnter autocommands
+16633.394  195.907  195.907: sourcing /usr/local/Cellar/neovim/0.3.1/share/nvim/runtime/autoload/provider/clipboard.vim
+16633.449  000.268: before starting main loop
+16637.134  000.810  000.810: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/ctrlspace.vim
+16638.526  000.705  000.705: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/builder.vim
+16639.534  000.502  000.502: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/buflist.vim
+16645.384  000.367  000.367: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/formatters/webdevicons.vim
+16646.227  000.394  000.394: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/extensions/tabline/formatters/default.vim
+16665.798  000.648  000.648: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/airline/async.vim
+16673.943  001.762  001.762: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/ale/engine.vim
+16674.890  000.394  000.394: sourcing /Users/fill/.cache/dein/.cache/init.vim/.dein/autoload/ale/statusline.vim
+16679.506  040.476: first screen update
+16679.512  000.006: --- NVIM STARTED ---
