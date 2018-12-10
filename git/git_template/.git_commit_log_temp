@@ -1,26 +1,16 @@
 ::
 
 # ==== Emojis ====
-# 🐛 :bug: バグ修正
-# ✨ :sparkles: 改良
-# 🎉 :tada: 盛大に祝うべき大きな機能追加
-# 🚧 :construction: WIP(Work In Progress)
-# ♻️  :recycle: リファクタリング
-# 🚨 :rotating_light: エラー発見
-# 📚 :books: ドキュメント（Documentation）
-# 🎨 :art: デザインUI/UX(Accessibility)
-# 🔧 :wrench: ツール（Tooling）
-# 🗑️  :wastebasket: 削除（Removal）
-# 👮 :cop: セキュリティ関連の改善
-# 🚀 :rocket: パフォーマンス改善
-# 👍 :+1: 機能改善
-
-# ==== Format ====
-# :emoji: Subject
-#
-# Commit body...
-
-# ==== Reference ====
-# https://gist.github.com/nownabe/85d8595fd142adc426fbfaf2bab015e0
-# ===================
-
+# 🐛 :bug:                  バグ修正
+# ✨ :sparkles:             小さな改良
+# 🔧 :wrench:               ツール導入による変更
+# 🎉 :tada:                 盛大に祝うべき大きな機能追加
+# ♻️  :recycle:              リファクタリング
+# 📚 :books:                ドキュメント（Documentation）
+# 🎨 :art:                  デザインUI/UX(Accessibility)
+# ⌛️ :hourglass:            速度計測
+# ✂️  :scissors:             機能・関数削除
+# 🐙 :octocat:              master にマージ
+# 🔃 :arrows_clockwise:     ファイル場所移動
+# 🚑 :ambulance:            応急処置
+#    :trollface:            トロールをしてしまった
