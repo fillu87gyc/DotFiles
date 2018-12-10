@@ -4,6 +4,9 @@ function fish_user_key_bindings
   bind \co peco_z # Ctrl-[にバインドする
   bind \cs emoji-cli
 end
+set PATH /usr/local/bin $PATH
+set PATH ~/.rbenv/shims $PATH
+status --is-interactive; and source (rbenv init -|psub)
 
 # set -x PATH (echo $PATH | tr ' ' '\n' | sort -u)
 # viでもvimで開く
@@ -32,7 +35,11 @@ alias color_sample='curl -L https://gist.githubusercontent.com/ytaniike/1002305/
 alias iftop='iftop -i en1'
 alias emacs='vim'
 alias cot='open $1 -a "/Applications/CotEditor.app"'
-alias sp '~/dotfiles/bin/sh/vim-speedtest.sh'
+alias sp='~/dotfiles/bin/sh/vim-speedtest.sh'
+alias gl='git log --color --graph --pretty=format:"%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(green reverse) %an<@%cn> %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80) %s%Creset%n%n%w(80,2,2)%b" | emojify | less -r'
+
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/sh" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/fish" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
