@@ -1,0 +1,91 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.028  000.028: --- VIM STARTING ---
+002.733  002.705: Allocated generic buffers
+003.453  000.720: locale set
+003.459  000.006: clipboard setup
+003.470  000.011: window checked
+013.465  009.995: inits 1
+013.473  000.008: parsing arguments
+013.475  000.002: expanding arguments
+025.599  012.124: shell init
+026.325  000.726: Termcap init
+026.365  000.040: inits 2
+026.691  000.326: init highlight
+029.741  001.408  001.408: sourcing /Users/fill/.vim/dein/repos/github.com/Shougo/dein.vim/autoload/dein.vim
+031.675  001.687  001.687: sourcing /Users/fill/.vim/dein/repos/github.com/Shougo/dein.vim/autoload/dein/util.vim
+034.185  000.810  000.810: sourcing /Users/fill/.vim/dein/repos/github.com/Shougo/dein.vim/autoload/dein/autoload.vim
+035.892  000.968  000.968: sourcing /Users/fill/.vim/dein/repos/github.com/Shougo/dein.vim/autoload/dein/types/git.vim
+036.280  001.881  000.913: sourcing /Users/fill/.vim/dein/repos/github.com/Shougo/dein.vim/autoload/dein/parse.vim
+053.467  000.422  000.422: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/ftdetect/ftdetect.vim
+053.634  011.898  011.476: sourcing /usr/local/share/vim/vim81/filetype.vim
+054.505  000.716  000.716: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/ftplugin.vim
+055.296  000.660  000.660: sourcing /usr/local/share/vim/vim81/ftplugin.vim
+056.585  001.086  001.086: sourcing /usr/local/share/vim/vim81/indent.vim
+061.759  002.877  002.877: sourcing /usr/local/share/vim/vim81/syntax/syncolor.vim
+061.964  003.910  001.033: sourcing /usr/local/share/vim/vim81/syntax/synload.vim
+062.016  005.199  001.289: sourcing /usr/local/share/vim/vim81/syntax/syntax.vim
+062.246  035.027  009.682: sourcing $HOME/.vimrc
+062.255  000.537: sourcing vimrc file(s)
+064.712  000.410  000.410: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/neocomplete/buffer.vim
+065.300  000.516  000.516: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/neocomplete/dictionary.vim
+065.564  000.200  000.200: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/neocomplete/member.vim
+065.809  000.174  000.174: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/neocomplete/tag.vim
+066.353  000.469  000.469: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/neocomplete.vim
+066.947  000.532  000.532: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/neosnippet.vim
+068.846  000.667  000.667: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/autoload/nerdtree.vim
+071.650  001.503  001.503: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/path.vim
+072.543  000.738  000.738: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/menu_controller.vim
+073.274  000.549  000.549: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/menu_item.vim
+074.045  000.626  000.626: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/key_map.vim
+075.058  000.867  000.867: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/bookmark.vim
+075.996  000.789  000.789: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/tree_file_node.vim
+077.294  001.149  001.149: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/tree_dir_node.vim
+078.188  000.750  000.750: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/opener.vim
+079.154  000.822  000.822: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/creator.vim
+079.681  000.381  000.381: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/flag_set.vim
+080.409  000.594  000.594: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/nerdtree.vim
+081.371  000.831  000.831: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/ui.vim
+081.829  000.325  000.325: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/event.vim
+082.234  000.264  000.264: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/lib/nerdtree/notifier.vim
+083.525  001.132  001.132: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/autoload/nerdtree/ui_glue.vim
+087.617  000.374  000.374: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/nerdtree_plugin/exec_menuitem.vim
+089.160  001.478  001.478: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/nerdtree_plugin/fs_menu.vim
+089.307  022.298  008.459: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/NERD_tree.vim
+090.777  000.824  000.824: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/autoload/unite/custom.vim
+090.948  001.573  000.749: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/unite/bookmark.vim
+091.544  000.530  000.530: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/unite/buffer.vim
+092.141  000.531  000.531: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/unite/window.vim
+092.746  000.543  000.543: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/unite.vim
+093.851  001.042  001.042: sourcing /Users/fill/.vim/dein/.cache/.vimrc/.dein/plugin/vimshell.vim
+095.218  000.502  000.502: sourcing /usr/local/share/vim/vim81/plugin/getscriptPlugin.vim
+096.028  000.740  000.740: sourcing /usr/local/share/vim/vim81/plugin/gzip.vim
+096.905  000.806  000.806: sourcing /usr/local/share/vim/vim81/plugin/logiPat.vim
+097.339  000.370  000.370: sourcing /usr/local/share/vim/vim81/plugin/manpager.vim
+098.063  000.654  000.654: sourcing /usr/local/share/vim/vim81/plugin/matchparen.vim
+099.210  001.084  001.084: sourcing /usr/local/share/vim/vim81/plugin/netrwPlugin.vim
+099.600  000.300  000.300: sourcing /usr/local/share/vim/vim81/plugin/rrhelper.vim
+100.189  000.494  000.494: sourcing /usr/local/share/vim/vim81/plugin/spellfile.vim
+100.901  000.629  000.629: sourcing /usr/local/share/vim/vim81/plugin/tarPlugin.vim
+101.560  000.585  000.585: sourcing /usr/local/share/vim/vim81/plugin/tohtml.vim
+102.248  000.595  000.595: sourcing /usr/local/share/vim/vim81/plugin/vimballPlugin.vim
+103.097  000.759  000.759: sourcing /usr/local/share/vim/vim81/plugin/zipPlugin.vim
+103.113  004.522: loading plugins
+103.261  000.148: loading packages
+103.353  000.092: loading after plugins
+103.914  000.561: inits 3
+105.408  001.494: reading viminfo
+105.456  000.048: setting raw mode
+105.502  000.046: start termcap
+105.522  000.020: clearing screen
+106.752  001.230: opening buffers
+106.838  000.086: BufEnter autocommands
+106.841  000.003: editing files in windows
+107.102  000.261: VimEnter autocommands
+107.665  000.563: before starting main loop
+109.442  001.777: first screen update
+109.445  000.003: --- VIM STARTED ---
