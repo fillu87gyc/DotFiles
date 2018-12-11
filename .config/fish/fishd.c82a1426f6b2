@@ -4,7 +4,7 @@ SET ZO_CMD:zo
 SET Z_CMD:z
 SET Z_DATA:/Users/fill/\x2elocal/share/z/data
 SET Z_DATA_DIR:/Users/fill/\x2elocal/share/z
-SET Z_EXCLUDE:git
+SET Z_EXCLUDE:\x2egit
 SET __fish_classic_git_prompt_initialized:\x1d
 SET __fish_init_2_39_8:\x1d
 SET __fish_init_2_3_0:\x1d
