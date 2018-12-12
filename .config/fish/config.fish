@@ -1,14 +1,14 @@
-function fish_user_key_bindings
-#   bind \cr 'peco_select_history (commandline -b)'
-  bind \c] peco_select_ghq_repository  # 追加
-#   bind \co peco_z # Ctrl-[にバインドする
-  bind \cs emoji-cli
-  bind \cf '__fzf_find_file'
-#   bind \cr '__fzf_reverse_isearch'
-  bind \cr '__fzf_find_and_execute'
-#   bind \ck '__fzf_cd'
-  bind \co '__fzf_cd_with_hidden'
-end
+# function fish_user_key_bindings
+# #   bind \cr 'peco_select_history (commandline -b)'
+#   bind \c] peco_select_ghq_repository  # 追加
+# #   bind \co peco_z # Ctrl-[にバインドする
+#   bind \cs emoji-cli
+# #   bind \cf '__fzf_find_file'
+# #   bind \cr '__fzf_reverse_isearch'
+# #   bind \cr '__fzf_find_and_execute'
+# #   bind \ck '__fzf_cd'
+# #   bind \co '__fzf_cd_with_hidden'
+# end
 set PATH /usr/local/bin $PATH
 set PATH ~/.rbenv/shims $PATH
 status --is-interactive; and source (rbenv init -|psub)
@@ -24,6 +24,9 @@ set -g theme_git_worktree_support yes
 set -g fish_prompt_pwd_dir_length 0 
 set -g theme_newline_cursor yes
 set -g theme_display_date yes
+
+source ~/dotfiles/.fzf/shell/key-bindings.fish
+
 alias rrm='remove_file.sh'
 alias man='jman'
 alias g='git'

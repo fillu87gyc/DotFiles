@@ -1,9 +1,7 @@
-set -q FZF_TMUX_HEIGHT; or set -U FZF_TMUX_HEIGHT "40%"
-set -q FZF_DEFAULT_OPTS; or set -U FZF_DEFAULT_OPTS "--height $FZF_TMUX_HEIGHT"
-set -q FZF_LEGACY_KEYBINDINGS; or set -U FZF_LEGACY_KEYBINDINGS 1
-set -q FZF_PREVIEW_FILE_CMD; or set -U FZF_PREVIEW_FILE_CMD "head -n 10"
-set -q FZF_PREVIEW_DIR_CMD; or set -U FZF_PREVIEW_DIR_CMD "ls"
-
-function fzf_uninstall -e fzf_uninstall
-  # Erase env vars and __fzf functions here.
-end
+set -U FZF_LEGACY_KEYBINDINGS 0
+set -x FZF_DEFAULT_OPTS '--height 60% --reverse --border' 
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
+set -x FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
+set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set -x FZF_CTRL__COMMAND $FZF_DEFAULT_COMMAND
+set -x FZF_ALT_C_COMMAND 'find . -type d |grep --invert-match  "\.\git"'
