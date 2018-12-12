@@ -1,6 +1,6 @@
 # Key bindings
 # ------------
-function fzf_key_bindings
+function fzf_key_bindings_default
 
   # Store current token in $dir as root for the 'find' command
   function fzf-file-widget -d "List files and folders"
