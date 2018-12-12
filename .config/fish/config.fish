@@ -25,6 +25,8 @@ set -g fish_prompt_pwd_dir_length 0
 set -g theme_newline_cursor yes
 set -g theme_display_date yes
 
+set -g GHQ_ROOT '~/src'
+
 source ~/dotfiles/.fzf/shell/key-bindings.fish
 
 alias rrm='remove_file.sh'
