@@ -25,8 +25,10 @@ set -g fish_prompt_pwd_dir_length 0
 set -g theme_newline_cursor yes
 set -g theme_display_date yes
 
-source ~/dotfiles/.fzf/shell/key-bindings.fish
-
+set -g GHQ_ROOT '/Users/fill/src'
+source /Users/fill/.config/fish/functions/key_bind/fzf-key-bindings-ghq.fish
+source /Users/fill/dotfiles/.config/fish/functions/key_bind/fzf-key-bindings-default.fish
+fish_user_key_bindings
 alias rrm='remove_file.sh'
 alias man='jman'
 alias g='git'
@@ -45,7 +47,8 @@ alias emacs='vim'
 alias cot='open $1 -a "/Applications/CotEditor.app"'
 alias sp='bash ~/dotfiles/bin/sh/vim-speedtest.sh'
 alias gl='git log --color --graph --pretty=format:"%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(green reverse) %an<@%cn> %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80) %s%Creset%n%n%w(80,2,2)%b" | emojify | less -r'
-alias cd='cd'
+alias sot='open $1 -a "/Applications/Sourcetree.app"'
+
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/sh" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/fish" $fish_user_paths
