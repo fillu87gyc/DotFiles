@@ -81,6 +81,11 @@ noremap <Leader>w :w<CR>
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 nnoremap == gg=Gg;
+
+
+imap <C-e> <C-x><C-o>
+imap <C-j> <C-n>
+imap <C-k> <C-p>
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
