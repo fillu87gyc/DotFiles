@@ -42,15 +42,15 @@ noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
 set matchtime=1
 source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
 set mouse=a
-nnoremap <silent> <S-j> :split<CR>
-nnoremap <silent> <S-l> :vsplit<CR>
+nnoremap <silent> <Leader><S-j> :split<CR>
+nnoremap <silent> <Leader><S-l> :vsplit<CR>
 nnoremap <Bar> $:let pos = getpos(".")<CR>:join<CR>:call setpos('.', pos)<CR>
 
 " window switch
-nnoremap <Leader><C-h> <C-w>h
-nnoremap <Leader><C-j> <C-w>j
-nnoremap <Leader><C-k> <C-w>k
-nnoremap <Leader><C-l> <C-w>l
+nnoremap <S-h> <C-w>h
+nnoremap <S-j> <C-w>j
+nnoremap <S-k> <C-w>k
+nnoremap <S-l> <C-w>l
 
 " 最後まで飛ぶ
 nnoremap <Leader>l $
@@ -81,6 +81,11 @@ noremap <Leader>w :w<CR>
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 nnoremap == gg=Gg;
+
+
+imap <C-e> <C-x><C-o>
+imap <C-j> <C-n>
+imap <C-k> <C-p>
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
