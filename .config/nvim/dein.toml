@@ -1,8 +1,6 @@
 [[plugins]]
 repo= 'cespare/vim-toml'
-
-[[plugins]]
-repo = 'inkarkat/vim-SyntaxRange'
+on_ft = 'toml'
 
 [[plugins]]
 repo = 'Shougo/dein.vim'
@@ -156,18 +154,26 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 [[plugins]]
 repo = 'rhysd/vim-clang-format'
+on_ft = ['c','c++']
 hook_add = '''
   let g:clang_format#detect_style_file = 1
   let g:clang_format#auto_format = 1
   let g:clang_format#auto_format_on_insert_leave = 1
   autocmd FileType c ClangFormatAutoEnable
 '''
+
 [[plugins]]
 repo='Shougo/context_filetype.vim'
 
-# [[plugins]]
-# repo = 'Shougo/neosnippet.vim'
-# depends = ['neosnippet-snippets', 'context_filetype.vim']
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = 'context_filetype.vim'
+on_ft = 'toml'
+
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
