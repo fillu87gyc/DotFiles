@@ -1,8 +1,4 @@
-[[plugins]]
-repo= 'cespare/vim-toml'
 
-[[plugins]]
-repo = 'inkarkat/vim-SyntaxRange'
 
 [[plugins]]
 repo = 'Shougo/dein.vim'
@@ -16,11 +12,18 @@ repo= 'Lokaltog/vim-easymotion'
 hook_add='''
   let g:EasyMotion_do_mapping = 0
   let g:EasyMotion_smartcase = 1
-  map <Leader>f <plug>(easymotion-overwin-f2)
-  map <Leader>j <Plug>(easymotion-overwin-line)
-  map <Leader>k <Plug>(easymotion-overwin-line)
-  map  <Leader><Leader>s <Plug>(easymotion-bd-w)
-  nmap <Leader><Leader>s <Plug>(easymotion-overwin-w)
+
+  " <Leader>f{char} to move to {char}
+  nmap  <Leader>s <Plug>(easymotion-bd-f)
+  vmap  <Leader>s <Plug>(easymotion-bd-f)
+
+  " s{char}{char} to move to {char}{char}
+  nmap <Leader><Leader>s <Plug>(easymotion-bd-f2)
+  vmap <Leader><Leader>s <Plug>(easymotion-bd-f2)
+
+  " Move to line
+  nmap <Leader>j <Plug>(easymotion-bd-jk)
+  vmap <Leader>j <Plug>(easymotion-bd-jk)
 '''
 
 [[plugins]]
@@ -153,21 +156,13 @@ highlight link ALEWarningSign StorageClass
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 '''
-
-[[plugins]]
-repo = 'rhysd/vim-clang-format'
-hook_add = '''
-  let g:clang_format#detect_style_file = 1
-  let g:clang_format#auto_format = 1
-  let g:clang_format#auto_format_on_insert_leave = 1
-  autocmd FileType c ClangFormatAutoEnable
-'''
 [[plugins]]
 repo='Shougo/context_filetype.vim'
 
-# [[plugins]]
-# repo = 'Shougo/neosnippet.vim'
-# depends = ['neosnippet-snippets', 'context_filetype.vim']
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
+
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'

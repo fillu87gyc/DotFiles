@@ -3,15 +3,54 @@ repo = 'Shougo/deoplete.nvim'
 depends = 'context_filetype.vim'
 on_i = 1
 hook_source = '''
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#enable_ignore_case = 1
-    let g:deoplete#enable_smart_case = 1
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_ignore_case = 1
+  let g:deoplete#enable_smart_case = 1
 '''
 
 [[plugins]]
 repo = 'rhysd/github-complete.vim'
-# on_ft = ['markdown', 'gitcommit']
+on_ft = ['markdown', 'gitcommit']
 on_i = 1
-hook_add = '''
+hook_source = '''
   let g:github_complete_emoji_japanese_workaround = 1
+  if !exists('g:neocomplete#sources#omni#input_patterns')
+    let g:neocomplete#sources#omni#input_patterns = {}
+  endif
+  let g:neocomplete#sources#omni#input_patterns.markdown = ''
+  let g:neocomplete#sources#omni#input_patterns.gitcommit = ''
 '''
+[[plugins]]
+repo='dag/vim-fish'
+on_ft='fish'
+hook_add='''
+" Set up :make to use fish for syntax checking.
+compiler fish
+
+" " Set this to have long lines wrap inside comments.
+" setlocal textwidth=79
+
+" Enable folding of block structures in fish.
+setlocal foldmethod=expr
+'''
+[[plugins]]
+repo= 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+on_ft = ['c','c++']
+hook_add = '''
+  let g:clang_format#detect_style_file = 1
+  let g:clang_format#auto_format = 1
+  let g:clang_format#auto_format_on_insert_leave = 1
+  autocmd FileType c ClangFormatAutoEnable
+'''
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = 'context_filetype.vim'
+on_ft = 'toml'
+
+
+
