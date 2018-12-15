@@ -3,15 +3,21 @@ repo = 'Shougo/deoplete.nvim'
 depends = 'context_filetype.vim'
 on_i = 1
 hook_source = '''
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#enable_ignore_case = 1
-    let g:deoplete#enable_smart_case = 1
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_ignore_case = 1
+  let g:deoplete#enable_smart_case = 1
 '''
 
 [[plugins]]
 repo = 'rhysd/github-complete.vim'
-# on_ft = ['markdown', 'gitcommit']
+depends = ['neocomplete']
+on_ft = ['markdown', 'gitcommit']
 on_i = 1
-hook_add = '''
+hook_source = '''
   let g:github_complete_emoji_japanese_workaround = 1
+  if !exists('g:neocomplete#sources#omni#input_patterns')
+    let g:neocomplete#sources#omni#input_patterns = {}
+  endif
+  let g:neocomplete#sources#omni#input_patterns.markdown = ''
+  let g:neocomplete#sources#omni#input_patterns.gitcommit = ''
 '''
