@@ -26,9 +26,12 @@ set -g theme_newline_cursor yes
 set -g theme_display_date yes
 
 set -g GHQ_ROOT '/Users/fill/src'
-source /Users/fill/.config/fish/functions/key_bind/fzf-key-bindings-ghq.fish
+
+source /Users/fill/dotfiles/.config/fish/functions/key_bind/fzf-key-bindings-ghq.fish
 source /Users/fill/dotfiles/.config/fish/functions/key_bind/fzf-key-bindings-default.fish
-fish_user_key_bindings
+source /Users/fill/dotfiles/.config/fish/functions/key_bind/fzf-z.fish
+
+
 alias rrm='remove_file.sh'
 alias man='jman'
 alias g='git'

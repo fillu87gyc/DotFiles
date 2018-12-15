@@ -1,0 +1,1 @@
+/Users/fill/dotfiles/bin/fish/fzf-z.fish
