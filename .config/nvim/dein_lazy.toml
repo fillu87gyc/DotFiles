@@ -10,7 +10,6 @@ hook_source = '''
 
 [[plugins]]
 repo = 'rhysd/github-complete.vim'
-depends = ['neocomplete']
 on_ft = ['markdown', 'gitcommit']
 on_i = 1
 hook_source = '''
