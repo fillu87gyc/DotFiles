@@ -24,6 +24,8 @@ hook_add='''
   " Move to line
   nmap <Leader>j <Plug>(easymotion-bd-jk)
   vmap <Leader>j <Plug>(easymotion-bd-jk)
+  nmap <Leader>k <Plug>(easymotion-bd-jk)
+  vmap <Leader>k <Plug>(easymotion-bd-jk)
 '''
 
 [[plugins]]
