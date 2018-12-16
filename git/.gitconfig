@@ -55,3 +55,7 @@
 	trustExitCode = true
 [ghq]
     root = ~/src
+[merge]
+  ff = false
+[pull]
+  ff = only
