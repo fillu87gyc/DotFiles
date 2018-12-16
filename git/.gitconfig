@@ -58,5 +58,6 @@
   root = ~/src
 [merge]
   ff = false
+  template = /Users/fill/dotfiles/git/git_template/.git_merge_log_template
 [pull]
   ff = only
