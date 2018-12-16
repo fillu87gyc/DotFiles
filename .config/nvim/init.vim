@@ -82,6 +82,7 @@ noremap <Leader>w :w<CR>
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 " nnoremap == gg=Gg;
 nnoremap == :%!fmt <CR>
+nnoremap <Leader>= :%s/	/  /g
 
 imap <C-e> <C-x><C-o>
 imap <C-j> <C-n>
@@ -95,7 +96,7 @@ endif
 set runtimepath+=/Users/fill/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/fill/.cache/dein') 
+if dein#load_state('/Users/fill/.cache/dein')
   call dein#begin('/Users/fill/.cache/dein')
 
   " Let dein manage dein
