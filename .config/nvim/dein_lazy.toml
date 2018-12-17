@@ -30,7 +30,7 @@ on_ft = 'toml'
 
 [[plugins]]
 repo = 'rhysd/vim-clang-format'
-on_ft = ['c','c++']
+on_ft = ['c','cpp']
 hook_add = '''
   let g:clang_format#detect_style_file = 1
   let g:clang_format#auto_format = 1
