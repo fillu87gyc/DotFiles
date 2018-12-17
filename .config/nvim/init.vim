@@ -1,5 +1,3 @@
-" set ambiwidth=double
-
 set encoding=UTF-8
 set ruler           "カーソルが何行目の何列目に置かれているかを表示"
 set autoindent      "改行時に前の行のインデントを継続する"
@@ -87,6 +85,12 @@ nnoremap <Leader>= :%s/	/  /g
 imap <C-e> <C-x><C-o>
 imap <C-j> <C-n>
 imap <C-k> <C-p>
+"--Undoをできるように ref #37
+if has('persistent_undo')
+  set undodir=~/.config/nvim/undo
+  set undofile
+endif
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
