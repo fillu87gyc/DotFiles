@@ -3,3 +3,4 @@
 sandbox/*
 .vscode/*
 tasklist.md
+.config/nvim/undo
