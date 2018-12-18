@@ -27,6 +27,12 @@ hook_add='''
   nmap <Leader>k <Plug>(easymotion-bd-jk)
   vmap <Leader>k <Plug>(easymotion-bd-jk)
 '''
+[[plugins]]
+repo='itchyny/vim-parenmatch'
+hook_add='''
+" https://itchyny.hatenablog.com/entry/2016/03/30/210000
+let g:loaded_matchparen = 1
+'''
 
 [[plugins]]
 repo= 'tomasr/molokai'
