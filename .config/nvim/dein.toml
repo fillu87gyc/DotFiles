@@ -1,5 +1,3 @@
-
-
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
@@ -149,6 +147,38 @@ hook_add = '''
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = '0'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+  " layout - down / up / left / right
+  let g:fzf_layout = { 'up': '~70%' }
+  " file selector
+  nnoremap <silent> ;t :FZFFileList<CR>
+  command! FZFFileList call fzf#run({
+              \ 'source': 'find . -type f -name .git -prune -o ! -name .DS_Store ! -name "*~" 2> /dev/null',
+              "\ 'options': '--height 4%',
+              \ 'sink': 'e'})
+  " grep
+  nnoremap <silent> ;f :Grep<CR>
+  command! -bang -nargs=* Grep
+    \ call fzf#vim#grep(
+    \   'rg -uu --column --line-number --no-heading --color=always '.shellescape(<q-args>), 0,
+    \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
+  " under cursor grep
+  nnoremap <silent> ;s :Find<CR>
+  command! -bang -nargs=* Find
+    \ call fzf#vim#grep(
+    \   'rg -uu --column --line-number --no-heading --color=always '.shellescape(expand('<cword>')), 1,
+    \   <bang>0 ? fzf#vim#with_preview('up:60%')
+    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+    \   <bang>0)
+'''
 
 [[plugins]]
 repo = 'w0rp/ale'
