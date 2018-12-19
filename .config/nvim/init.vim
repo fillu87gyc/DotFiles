@@ -84,7 +84,7 @@ nnoremap <Leader>= :%s/	/  /g
 
 imap <C-e> <C-x><C-o>
 imap <C-j> <C-n>
-imap <C-k> <C-p>
+" imap <C-k> <C-p>
 "--Undoをできるように ref #37
 if has('persistent_undo')
   set undodir=~/.config/nvim/undo
