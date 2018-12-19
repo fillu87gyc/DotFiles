@@ -19,7 +19,7 @@
   d2      = diff HEAD~2
   d3      = diff HEAD~3
   grh     = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(bold white)%s%C(reset)  %C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-  mg      = merge
+  mg      = !"git merge $1 ;and git branch | grep -v 'develop' | grep -v 'master' | xargs git branch -d"
   pin     = push -u origin
   rename  = commit --amend
   ref     = reflog
