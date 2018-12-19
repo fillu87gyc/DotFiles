@@ -21,7 +21,7 @@
   grh     = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(bold white)%s%C(reset)  %C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   mg      = merge
   ff      = merge --ff
-  db      = !git branch | grep -v 'dev' | grep -v 'master' | xargs git branch -d 2> /dev/null
+  db      = !git branch | grep -v 'master' | xargs git branch -d 2> /dev/null
   pin     = push -u origin
   rename  = commit --amend
   ref     = reflog
