@@ -3,6 +3,7 @@ set -g fish_user_paths "/Users/fill/dotfiles/bin/sh" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/fish" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
+set -g fish_user_paths "/Users/fill/go/bin" $fish_user_paths
 set PATH /usr/local/bin $PATH
 set PATH ~/.rbenv/shims $PATH
 status --is-interactive; and source (rbenv init -|psub)
@@ -25,7 +26,7 @@ source /Users/fill/dotfiles/.config/fish/functions/key_bind/fzf-z.fish
 alias t='tmux attach; or tmux new'
 alias rrm='remove_file.sh'
 alias man='jman'
-alias g='git'
+alias g='hub'
 alias ..='cd ..'
 alias a.out='./a.out'
 alias so='source'
