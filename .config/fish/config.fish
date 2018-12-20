@@ -3,6 +3,7 @@ set -g fish_user_paths "/Users/fill/dotfiles/bin/sh" $fish_user_paths
 set -g fish_user_paths "/Users/fill/dotfiles/bin/fish" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
+set -g fish_user_paths "/Users/fill/go/bin" $fish_user_paths
 set PATH /usr/local/bin $PATH
 set PATH ~/.rbenv/shims $PATH
 status --is-interactive; and source (rbenv init -|psub)

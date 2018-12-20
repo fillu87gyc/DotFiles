@@ -5,3 +5,4 @@ sandbox/*
 tasklist.md
 .config/nvim/undo
 .config/hub
+.config/gist/
