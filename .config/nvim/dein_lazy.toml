@@ -74,5 +74,9 @@ repo = 'osyo-manga/vim-precious'
 depends = 'context_filetype.vim'
 on_ft = 'toml'
 
-
-
+[[plugins]]
+repo='cohama/lexima.vim'
+on_i = 1
+hook_source='''
+  call lexima#add_rule({'at': '\%#\n\s*}', 'char': '}', 'input': '}', 'delete': '}'})
+'''
