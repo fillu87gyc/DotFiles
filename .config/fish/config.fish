@@ -4,8 +4,8 @@ set -g fish_user_paths "/Users/fill/dotfiles/bin/fish" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/Users/fill/go/bin" $fish_user_paths
-set PATH /usr/local/bin $PATH
-set PATH ~/.rbenv/shims $PATH
+set -g fish_user_paths "/usr/local/bin" $fish_user_paths
+set -g fish_user_paths "/Users/fill/.rbenv/shims" $fish_user_paths
 status --is-interactive; and source (rbenv init -|psub)
 
 alias vi='nvim'
@@ -13,9 +13,11 @@ alias vim='/usr/local/bin/vim'
 
 set -g theme_display_git_master_branch yes
 set -g theme_git_worktree_support yes
-set -g fish_prompt_pwd_dir_length 0 
+set -g fish_prompt_pwd_dir_length 0
 set -g theme_newline_cursor yes
 set -g theme_display_date yes
+
+function fish_right_prompt; end
 
 set -g GHQ_ROOT '/Users/fill/src'
 
@@ -26,7 +28,9 @@ source /Users/fill/dotfiles/.config/fish/functions/key_bind/fzf-z.fish
 alias t='tmux attach; or tmux new'
 alias rrm='remove_file.sh'
 alias man='jman'
-alias g='hub'
+alias g='git'
+alias gbr='hub browse'
+alias gis='hub issue'
 alias ..='cd ..'
 alias a.out='./a.out'
 alias so='source'
@@ -43,3 +47,4 @@ alias cot='open $1 -a "/Applications/CotEditor.app"'
 alias sp='bash ~/dotfiles/bin/sh/vim-speedtest.sh'
 alias gl='git log --color --graph --pretty=format:"%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(green reverse) %an<@%cn> %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80) %s%Creset%n%n%w(80,2,2)%b" | emojify | less -r'
 alias sot='open $1 -a "/Applications/Sourcetree.app"'
+
