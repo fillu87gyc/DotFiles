@@ -19,7 +19,7 @@
   d2      = diff HEAD~2
   d3      = diff HEAD~3
   # grh     = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(bold white)%s%C(reset)  %C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-  grh     = !"git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(bold white)%s%C(reset)  %C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative --color|less -r -R -N"
+  grh     = !"git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(bold white)%s%C(reset)  %C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative --color|less -r -R "
   mg      = merge
   ff      = merge --ff
   db      = !git branch | grep -v 'master' | xargs git branch -d 2> /dev/null
