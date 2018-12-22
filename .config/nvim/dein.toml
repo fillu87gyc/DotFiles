@@ -71,6 +71,7 @@ hook_add='''
     \}
   nmap <C-o> <Plug>AirlineSelectPrevTab
   nmap <C-p> <Plug>AirlineSelectNextTab
+  nmap <C-i> :bd<CR>
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
