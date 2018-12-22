@@ -5,7 +5,7 @@ function fzf_z
   cat $z_data_path/z.tmp > $z_data_path/z-data
   rm $z_data_path/z.tmp
 
-  z -l | fzf --height 30% --reverse --border | awk '{ print $2 }' | read recent
+  z -l | awk '{ print $2 }' |fzf --height 30% --reverse --border |  read recent
   if [ $recent ]
     cd $recent
     commandline -t ""
