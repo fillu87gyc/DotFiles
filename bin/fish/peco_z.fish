@@ -1,5 +1,5 @@
 function peco_z
-
+  set z_data_path '/Users/fill/dotfiles/.config/fish'
   grep -v "\.\git" $z_data_path/z-data > $z_data_path/z.tmp
   cat $z_data_path/z.tmp > $z_data_path/z-data
   rm $z_data_path/z.tmp
