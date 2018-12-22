@@ -15,31 +15,14 @@ hook_source = '''
         \ neosnippet#expandable_or_jumpable() ?
         \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
 '''
+depends=['neosnippet']
 
-[[plugins]]
-repo = 'Shougo/neosnippet'
-hook_source = '''
-  imap <C-k> <Plug>(neosnippet_expand_or_jump)
-  smap <C-k> <Plug>(neosnippet_expand_or_jump)
-  xmap <C-k> <Plug>(neosnippet_expand_target)
-  if has('conceal')
-    set conceallevel=2 concealcursor=niv
-  endif
-'''
-on_i  = 1
-on_ft = ['snippet']
-depends = ['neosnippet-snippets']
 [[plugins]]
 repo = 'rhysd/github-complete.vim'
 on_ft = ['markdown', 'gitcommit']
 on_i = 1
 hook_source = '''
   let g:github_complete_emoji_japanese_workaround = 1
-  if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
-  endif
-  let g:neocomplete#sources#omni#input_patterns.markdown = ''
-  let g:neocomplete#sources#omni#input_patterns.gitcommit = ''
 '''
 
 [[plugins]]
@@ -74,5 +57,9 @@ repo = 'osyo-manga/vim-precious'
 depends = 'context_filetype.vim'
 on_ft = 'toml'
 
-
-
+[[plugins]]
+repo='cohama/lexima.vim'
+on_i = 1
+hook_source='''
+  call lexima#add_rule({'at': '\%#\n\s*}', 'char': '}', 'input': '}', 'delete': '}'})
+'''
