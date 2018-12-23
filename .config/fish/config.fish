@@ -28,7 +28,7 @@ source /Users/fill/dotfiles/.config/fish/functions/key_bind/fzf-z.fish
 alias t='tmux attach; or tmux new'
 alias rrm='remove_file.sh'
 alias man='jman'
-alias g='git'
+# alias g='git'
 alias gbr='hub browse'
 alias gis='hub issue'
 alias ..='cd ..'
@@ -47,4 +47,6 @@ alias cot='open $1 -a "/Applications/CotEditor.app"'
 alias sp='bash ~/dotfiles/bin/sh/vim-speedtest.sh'
 alias gl='git log --color --graph --pretty=format:"%C(red reverse)%d%Creset%C(white reverse) %h% Creset %C(green reverse) %an<@%cn> %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80) %s%Creset%n%n%w(80,2,2)%b" | emojify | less -r'
 alias sot='open $1 -a "/Applications/Sourcetree.app"'
-
+function g --wraps git
+  hub $argv;
+end
