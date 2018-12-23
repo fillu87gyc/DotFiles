@@ -34,7 +34,9 @@ autocmd FileType text setlocal textwidth=0
 set list
 set wildmenu
 set showcmd
+
 set clipboard=unnamed
+
 noremap <Leader>r :source ~/.config/nvim/init.vim<CR>:noh<CR>:echo'reload!'<CR>
 " set showmatch
 set matchtime=1

@@ -25,6 +25,8 @@ hook_add='''
   nmap <Leader>k <Plug>(easymotion-bd-jk)
   vmap <Leader>k <Plug>(easymotion-bd-jk)
 '''
+
+# 括弧の対応関係を表示
 [[plugins]]
 repo='itchyny/vim-parenmatch'
 hook_add='''
@@ -129,7 +131,6 @@ repo='Yggdroot/indentLine'
 [[plugins]]
 repo='Shougo/unite.vim'
 
-
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
@@ -184,17 +185,18 @@ hook_add = '''
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
-let g:ale_lint_on_text_changed = 0
-let g:ale_sign_error = ''
-let g:ale_sign_warning = ''
-let g:airline#extensions#ale#open_lnum_symbol = '('
-let g:airline#extensions#ale#close_lnum_symbol = ')'
-let g:ale_echo_msg_format = '[%linter%]%code: %%s'
-highlight link ALEErrorSign Tag
-highlight link ALEWarningSign StorageClass
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+  let g:ale_lint_on_text_changed = 0
+  let g:ale_sign_error = ''
+  let g:ale_sign_warning = ''
+  let g:airline#extensions#ale#open_lnum_symbol = '('
+  let g:airline#extensions#ale#close_lnum_symbol = ')'
+  let g:ale_echo_msg_format = '[%linter%]%code: %%s'
+  highlight link ALEErrorSign Tag
+  highlight link ALEWarningSign StorageClass
+  nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+  nmap <silent> <C-j> <Plug>(ale_next_wrap)
 '''
+
 [[plugins]]
 repo='Shougo/context_filetype.vim'
 
