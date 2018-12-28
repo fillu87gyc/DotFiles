@@ -34,15 +34,24 @@ hook_add='''
 let g:loaded_matchparen = 1
 '''
 
+# [[plugins]]
+# repo= 'tomasr/molokai'
+# depends=['vim-airline']
+# hook_add='''
+#   colorscheme molokai
+#   syntax on
+#   set t_Co=256
+#   set termguicolors
+#   set background=dark
+# '''
+#
 [[plugins]]
-repo= 'tomasr/molokai'
-depends=['vim-airline']
+repo='altercation/vim-colors-solarized'
 hook_add='''
-  colorscheme molokai
-  syntax on
-  set t_Co=256
-  set termguicolors
+  let g:solarized_termcolors=256
+  syntax enable
   set background=dark
+  colorscheme solarized
 '''
 
 # airlineの左下にブランチを表示するために
@@ -92,7 +101,7 @@ hook_add='''
   let g:airline_symbols.spell = 'Ꞩ'
   let g:airline_symbols.notexists = '∄'
   let g:airline_symbols.whitespace = 'Ξ'
-  let g:airline_theme = 'molokai'
+  let g:airline_theme = 'solarized'
   let g:airline#extensions#branch#enabled = 1
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#wordcount#enabled = 0
@@ -214,3 +223,8 @@ hook_source = '''
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
+
+# vim-rails
+[[plugins]]
+repository = 'tpope/vim-rails'
+on_ft = ['ruby', 'eruby', 'css', 'scss', 'html', 'javascript', 'yaml']
