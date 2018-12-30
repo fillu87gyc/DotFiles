@@ -15,7 +15,7 @@ hook_source = '''
         \ neosnippet#expandable_or_jumpable() ?
         \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
 '''
-depends=['neosnippet']
+depends=['neosnippet.vim']
 
 [[plugins]]
 repo = 'rhysd/github-complete.vim'
@@ -60,6 +60,42 @@ on_ft = 'toml'
 [[plugins]]
 repo='cohama/lexima.vim'
 on_i = 1
-hook_source='''
-  call lexima#add_rule({'at': '\%#\n\s*}', 'char': '}', 'input': '}', 'delete': '}'})
+
+# Rubyのend補完
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_i = 1
+on_ft = ['ruby']
+
+# [[plugins]]
+# repo='takkii/ruby-dictionary3'
+# on_i = 1
+# on_ft = ['ruby']
+# hook_source='''
+#   setlocal dictionary+=/Users/fill/.cache/dein/repos/github.com/takkii/ruby-dictionary3/autoload/source
+#   call deoplete#custom#source(
+# \ 'dictionary', 'ruby', ['[^. *\t]\.\w*\|\h\w*::'])
+# '''
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'Shougo/deoplete-rct'
+on_ft = ['ruby']
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['ruby']
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'osyo-manga/vim-monster'
+on_ft = ['ruby']
+depends='deoplete'
+hook_source = '''
+  let g:monster#completion#backend = 'solargraph'
+  let g:monster#completion#solargraph#backend = "async_solargraph_suggest"
+  let g:deoplete#sources#omni#input_patterns = {
+  \ "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+  \}
 '''
