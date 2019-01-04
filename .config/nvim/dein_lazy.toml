@@ -77,6 +77,11 @@ on_ft = ['ruby']
 # \ 'dictionary', 'ruby', ['[^. *\t]\.\w*\|\h\w*::'])
 # '''
 
+# vim-rails
+[[plugins]]
+repo= 'tpope/vim-rails'
+on_ft = ['ruby', 'eruby', 'css', 'scss', 'html', 'javascript', 'yaml']
+
 # Rubyの自動補完
 [[plugins]]
 repo = 'Shougo/deoplete-rct'

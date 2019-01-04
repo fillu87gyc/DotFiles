@@ -224,7 +224,3 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 
-# vim-rails
-[[plugins]]
-repo= 'tpope/vim-rails'
-on_ft = ['ruby', 'eruby', 'css', 'scss', 'html', 'javascript', 'yaml']
