@@ -80,8 +80,7 @@ noremap <Leader>w :w<CR>
 " 検索終わりのハイライトを消す
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
-" nnoremap == gg=Gg;
-nnoremap == :%!fmt <CR>
+nnoremap == gg=Gg;
 nnoremap <Leader>= :%s/	/  /g
 
 imap <C-e> <C-x><C-o>
