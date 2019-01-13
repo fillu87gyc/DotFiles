@@ -17,6 +17,6 @@ if [ ${#download} -gt 6 ]; then
   download=$(echo $download/1024 |bc -l)
   download=$(printf "#[fg=colour160]D:%7.2f Mbps#[fg=colour255]" $download)
 else
-  download=$(printf "#[fg=colour105]U:%7.2f kbps#[fg=colour255]" $download)
+  download=$(printf "#[fg=colour105]D:%7.2f kbps#[fg=colour255]" $download)
 fi
 echo "$download $upload"
