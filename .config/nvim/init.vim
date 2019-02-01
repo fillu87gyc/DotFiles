@@ -95,7 +95,6 @@ if has('persistent_undo')
   set undodir=~/.config/nvim/undo
   set undofile
 endif
-
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
