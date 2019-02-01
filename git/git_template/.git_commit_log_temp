@@ -1,10 +1,9 @@
-::
-close #
+:
 
 
 # ================= Emojis =================
 # :bug:                    バグ修正
-# :sparkles:               小さな改良
+# :heavy_plus_sign:               小さな改良
 # :wrench:                 ツール導入による変更
 # :tada:                   盛大に祝うべき大きな機能追加
 # :construction:           工事中
