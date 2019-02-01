@@ -19,4 +19,4 @@ if [ ${#download} -gt 6 ]; then
 else
   download=$(printf "#[fg=colour105]D:%7.2f kbps#[fg=colour255]" $download)
 fi
-echo "$download $upload"
+echo "$upload $download"
