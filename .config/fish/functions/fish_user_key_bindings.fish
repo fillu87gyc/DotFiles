@@ -4,4 +4,6 @@ function fish_user_key_bindings
   bind \cy fzf_z
   bind \c] peco_select_ghq_repository  # 追加
   bind \co peco_z # Ctrl-[にバインドする
+  bind \ck forward-word
+  bind \cj backward-word
 end
